@@ -1,0 +1,3024 @@
+{
+  "AFHangar": [
+    {
+      "exitPoint": "AFHangarSideCExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "SideCEnterPoint"
+    },
+    {
+      "exitPoint": "AFHangarSideBExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "SideBEnterPoint"
+    },
+    {
+      "exitPoint": "AFHangarSideAExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "SideAEnterPoint"
+    }
+  ],
+  "AirfieldRegion": [
+    {
+      "exitPoint": "AirfieldExitPoint",
+      "toScene": "HubRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "HubExitPoint"
+    },
+    {
+      "exitPoint": "TrailerEEnterPoint",
+      "toScene": "TrailerE",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerEExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "AirfieldTrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "HubCaveEnterPointB",
+      "toScene": "HubCave",
+      "type": "ToCave",
+      "linkedPoint": "HubCaveExitPoint"
+    },
+    {
+      "exitPoint": "SideBEnterPoint",
+      "toScene": "AFHangar",
+      "type": "ToIndoors",
+      "linkedPoint": "AFHangarSideBExitPoint"
+    },
+    {
+      "exitPoint": "SideAEnterPoint",
+      "toScene": "AFHangar",
+      "type": "ToIndoors",
+      "linkedPoint": "AFHangarSideAExitPoint"
+    },
+    {
+      "exitPoint": "WoodCabinAEnterPoint",
+      "toScene": "AirfieldWoodCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "WoodCabinEExitPoint"
+    },
+    {
+      "exitPoint": "SideCEnterPoint",
+      "toScene": "AFHangar",
+      "type": "ToIndoors",
+      "linkedPoint": "AFHangarSideCExitPoint"
+    },
+    {
+      "exitPoint": "EnterPoint",
+      "toScene": "BunkerXL",
+      "type": "ToBunker",
+      "linkedPoint": "BunkerXLExitPoint"
+    }
+  ],
+  "AirfieldTrailerB": [
+    {
+      "exitPoint": "TrailerBExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerBEnterPoint"
+    }
+  ],
+  "AirfieldWoodCabinA": [
+    {
+      "exitPoint": "WoodCabinEExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WoodCabinAEnterPoint"
+    }
+  ],
+  "AshCabinD": [
+    {
+      "exitPoint": "LakeCabinGExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinDEnterPoint"
+    }
+  ],
+  "AshCabinF": [
+    {
+      "exitPoint": "LakeCabinFExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinFEnterPoint"
+    }
+  ],
+  "AshCanyonRegion": [
+    {
+      "exitPoint": "GoldMineEnterPoint1",
+      "toScene": "AshMine",
+      "type": "ToIndoors",
+      "linkedPoint": "GoldMineExitPoint1"
+    },
+    {
+      "exitPoint": "AshCaveBEnterPoint2",
+      "toScene": "AshCaveB",
+      "type": "ToCave",
+      "linkedPoint": "AshCaveBExitPoint2"
+    },
+    {
+      "exitPoint": "AshCaveBEnterPoint1",
+      "toScene": "AshCaveB",
+      "type": "ToCave",
+      "linkedPoint": "AshCaveBExitPoint1"
+    },
+    {
+      "exitPoint": "GoldMineEnterPoint2",
+      "toScene": "AshMine",
+      "type": "ToCave",
+      "linkedPoint": "GoldMineExitPoint2"
+    },
+    {
+      "exitPoint": "AshCaveAEnterPoint2",
+      "toScene": "AshCaveA",
+      "type": "ToCave",
+      "linkedPoint": "AshCaveAExitPoint2"
+    },
+    {
+      "exitPoint": "LakeCabinFEnterPoint",
+      "toScene": "AshCabinF",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinFExitPoint"
+    },
+    {
+      "exitPoint": "CrashMountainEnterPoint2",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "TWMExitPoint1"
+    },
+    {
+      "exitPoint": "WoodCabinAEnterPoint",
+      "toScene": "AshWoodCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "WoodCabinEExitPoint"
+    },
+    {
+      "exitPoint": "WoodCabinBEnterPoint",
+      "toScene": "WoodCabinB",
+      "type": "ToIndoors",
+      "linkedPoint": "WoodCabinBExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "AshCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinGExitPoint"
+    }
+  ],
+  "AshCaveA": [
+    {
+      "exitPoint": "AshCaveAExitPoint1",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "AshCaveAEnterPoint1"
+    },
+    {
+      "exitPoint": "AshCaveAExitPoint2",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "AshCaveAEnterPoint2"
+    }
+  ],
+  "AshCaveB": [
+    {
+      "exitPoint": "AshCaveBExitPoint2",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "AshCaveBEnterPoint2"
+    },
+    {
+      "exitPoint": "AshCaveBExitPoint1",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "AshCaveBEnterPoint1"
+    }
+  ],
+  "AshMine": [
+    {
+      "exitPoint": "GoldMineExitPoint1",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "GoldMineEnterPoint1"
+    },
+    {
+      "exitPoint": "GoldMineExitPoint2",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "AshCaveBEnterPoint2"
+    }
+  ],
+  "AshWoodCabinA": [
+    {
+      "exitPoint": "WoodCabinEExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WoodCabinAEnterPoint"
+    }
+  ],
+  "BankA": [
+    {
+      "exitPoint": "BankAExitPointA",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BankAEnterPoint"
+    }
+  ],
+  "BarnHouseA": [
+    {
+      "exitPoint": "BarnHouseAFrontExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BarnHouseAFrontEnterPoint"
+    },
+    {
+      "exitPoint": "BarnHouseASideExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BarnHouseASideEnterPoint"
+    }
+  ],
+  "BarnHouseB": [
+    {
+      "exitPoint": "BarnHouseBFrontExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BarnHouseBFrontEnterPoint"
+    }
+  ],
+  "BlackrockCaveA": [
+    {
+      "exitPoint": "BlackrockCaveExitPoint2",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "BlackrockCaveEnterPoint2"
+    },
+    {
+      "exitPoint": "BlackrockCaveExitPoint1",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "BlackrockCaveEnterPoint1"
+    }
+  ],
+  "BlackrockInteriorASurvival": [
+    {
+      "exitPoint": "WardenOfficeEnterPoint",
+      "toScene": "BlackrockPrisonSurvivalZone",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WardenOfficeExitPoint"
+    }
+  ],
+  "BlackrockMineA": [
+    {
+      "exitPoint": "MineExitPoint",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MineEnterPoint"
+    },
+    {
+      "exitPoint": "MineExitPoint2",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MineEnterPoint2"
+    }
+  ],
+  "BlackrockPowerplantA": [
+    {
+      "exitPoint": "PowerPlantExitPoint2",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "PowerPlantEnterPoint2"
+    },
+    {
+      "exitPoint": "PowerPlantExitPoint1",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "PowerPlantEnterPoint1"
+    }
+  ],
+  "BlackrockPrisonSurvivalZone": [
+    {
+      "exitPoint": "PrisonGateExitPoint1",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "BlackrockPrisonEnterPoint1"
+    },
+    {
+      "exitPoint": "WardenOfficeExitPoint",
+      "toScene": "BlackrockInteriorASurvival",
+      "type": "ToIndoors",
+      "linkedPoint": "WardenOfficeEnterPoint"
+    },
+    {
+      "exitPoint": "SteamTunnelsEnterPoint2",
+      "toScene": "BlackrockSteamTunnelsASurvival",
+      "type": "ToCave",
+      "linkedPoint": "SteamTunnelsExitPoint2"
+    }
+  ],
+  "BlackrockRegion": [
+    {
+      "exitPoint": "PowerPlantEnterPoint2",
+      "toScene": "BlackrockPowerplantA",
+      "type": "ToIndoors",
+      "linkedPoint": "PowerPlantExitPoint2"
+    },
+    {
+      "exitPoint": "BlackrockExitPoint",
+      "toScene": "BlackrockTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "BlackrockTransitionExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "PowerPlantEnterPoint1",
+      "toScene": "BlackrockPowerplantA",
+      "type": "ToIndoors",
+      "linkedPoint": "PowerPlantExitPoint1"
+    },
+    {
+      "exitPoint": "BlackrockCaveEnterPoint2",
+      "toScene": "BlackrockCaveA",
+      "type": "ToCave",
+      "linkedPoint": "BlackrockCaveExitPoint2"
+    },
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+    {
+      "exitPoint": "MineEnterPoint",
+      "toScene": "BlackrockMineA",
+      "type": "ToCave",
+      "linkedPoint": "MineExitPoint"
+    },
+    {
+      "exitPoint": "MineEnterPoint2",
+      "toScene": "BlackrockMineA",
+      "type": "ToCave",
+      "linkedPoint": "MineExitPoint2"
+    },
+    {
+      "exitPoint": "SteamTunnelsEnterPoint1",
+      "toScene": "BlackrockSteamTunnelsASurvival",
+      "type": "ToCave",
+      "linkedPoint": "SteamTunnelsExitPoint1"
+    },
+    {
+      "exitPoint": "BlackrockPrisonEnterPoint1",
+      "toScene": "BlackrockPrisonSurvivalZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "PrisonGateExitPoint1"
+    },
+    {
+      "exitPoint": "RadioControlHutEnterPoint",
+      "toScene": "RadioControlHutC",
+      "type": "ToIndoors",
+      "linkedPoint": "RadioControlHutExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "BlackRockTrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    }
+  ],
+  "BlackrockSteamTunnelsASurvival": [
+    {
+      "exitPoint": "SteamTunnelsExitPoint2",
+      "toScene": "BlackrockPrisonSurvivalZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "SteamTunnelsEnterPoint2"
+    },
+    {
+      "exitPoint": "SteamTunnelsExitPoint1",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "SteamTunnelsEnterPoint1"
+    }
+  ],
+  "BlackRockTrailerB": [
+    {
+      "exitPoint": "TrailerBExitPoint",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerBEnterPoint"
+    }
+  ],
+  "BlackrockTransitionZone": [
+    {
+      "exitPoint": "BlackrockTransitionExitPoint",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "BlackrockExitPoint"
+    },
+    {
+      "exitPoint": "CanyonRoadCaveEnter2",
+      "toScene": "CanyonRoadCave",
+      "type": "ToCave",
+      "linkedPoint": "CanyonCave_ExitPoint2"
+    }
+  ],
+  "BunkerA": [
+    {
+      "exitPoint": "BunkerAExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerB": [
+    {
+      "exitPoint": "BunkerBExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerC": [
+    {
+      "exitPoint": "BunkerCExitPoint",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerXL": [
+    {
+      "exitPoint": "BunkerXLExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "CampOffice": [
+    {
+      "exitPoint": "CampOfficeBackExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CampOfficeBackEnterPoint"
+    },
+    {
+      "exitPoint": "CampOfficeFrontExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CampOfficeFrontEnterPoint"
+    }
+  ],
+  "CanneryMarshTransitionCave": [
+    {
+      "exitPoint": "MarshRegionExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CanneryRegionExitPoint"
+    },
+    {
+      "exitPoint": "CanneryRegionExitPoint",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MarshRegionExitPoint"
+    }
+  ],
+  "CanneryRegion": [
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+    {
+      "exitPoint": "WoodCabinCEnterPoint",
+      "toScene": "WoodCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "WoodCabinCExitPoint"
+    },
+    {
+      "exitPoint": "RadioControlHutEnterPoint",
+      "toScene": "RadioControlHutB",
+      "type": "ToIndoors",
+      "linkedPoint": "RadioControlHutExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "WoodCabinAEnterPoint",
+      "toScene": "WoodCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "WoodCabinAExitPoint"
+    },
+    {
+      "exitPoint": "CanneryRegionExitPoint",
+      "toScene": "RavineTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "RavineExitPoint"
+    },
+    {
+      "exitPoint": "MaintenanceShedB2EnterPoint",
+      "toScene": "MaintenanceShedB",
+      "type": "ToIndoors",
+      "linkedPoint": "MaintenanceShedB2ExitPoint"
+    },
+    {
+      "exitPoint": "CanneryRegionExitPoint",
+      "toScene": "CanneryMarshTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "MarshRegionExitPoint"
+    },
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "CanneryTrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "EnterPoint",
+      "toScene": "BunkerA",
+      "type": "ToBunker",
+      "linkedPoint": "BunkerAExitPoint"
+    }
+  ],
+  "CanneryTrailerA": [
+    {
+      "exitPoint": "TrailerAExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerAEnterPoint"
+    }
+  ],
+  "CanyonRoadCave": [
+    {
+      "exitPoint": "CanyonCave_ExitPoint2",
+      "toScene": "BlackrockTransitionZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CanyonRoadCaveEnter2"
+    },
+    {
+      "exitPoint": "CanyonCave_ExitPoint1",
+      "toScene": "CanyonRoadTransitionZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CanyonRoadCaveEnter1"
+    }
+  ],
+  "CanyonRoadTransitionZone": [
+    {
+      "exitPoint": "CanyonRoadCaveEnter1",
+      "toScene": "CanyonRoadCave",
+      "type": "ToCave",
+      "linkedPoint": "CanyonCave_ExitPoint1"
+    },
+    {
+      "exitPoint": "CanyonRoadExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CanyonRoadEnterPoint1"
+    },
+    {
+      "exitPoint": "TrailerEEnterPoint",
+      "toScene": "TrailerE",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerEExitPoint"
+    }
+  ],
+  "CaveB": [
+    {
+      "exitPoint": "CaveBExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveBEnterPoint"
+    }
+  ],
+  "CaveC": [
+    {
+      "exitPoint": "CaveCExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveCEnterPoint"
+    }
+  ],
+  "CaveD": [
+    {
+      "exitPoint": "CaveDExitPoint2",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveDEnterPoint2"
+    },
+    {
+      "exitPoint": "CaveDExitPoint1",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveDEnterPoint1"
+    }
+  ],
+  "ChurchB": [
+    {
+      "exitPoint": "ChurchBExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ChruchBEnterPoint"
+    }
+  ],
+  "ChurchC": [
+    {
+      "exitPoint": "ChurchCExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ChurchCEnterPoint"
+    }
+  ],
+  "CoastalHouseA": [
+    {
+      "exitPoint": "CoastalHouseAExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseAEnterPoint"
+    }
+  ],
+  "CoastalHouseB": [
+    {
+      "exitPoint": "CoastalHouseBBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseBBackEnterPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseBFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseBFrontEnterPoint"
+    }
+  ],
+  "CoastalHouseC": [
+    {
+      "exitPoint": "CoastalHouseCBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseCBackEnterPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseCFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseCFrontEnterPoint"
+    }
+  ],
+  "CoastalHouseD": [
+    {
+      "exitPoint": "CoastalHouseDFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseDFrontEnterPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseDBackEnterPoint"
+    }
+  ],
+  "CoastalHouseE": [
+    {
+      "exitPoint": "CoastalHouseEExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseEEnterPoint"
+    }
+  ],
+  "CoastalHouseF": [
+    {
+      "exitPoint": "CoastalHouseFExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseFEnterPoint"
+    }
+  ],
+  "CoastalHouseH": [
+    {
+      "exitPoint": "HouseHFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HouseHBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHBackEnterPoint"
+    }
+  ],
+  "CoastalRegion": [
+    {
+      "exitPoint": "CoastalHouseEEnterPoint",
+      "toScene": "CoastalHouseE",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseEExitPoint"
+    },
+    {
+      "exitPoint": "CoastalExitPoint2",
+      "toScene": "MineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "MineExitPoint2"
+    },
+    {
+      "exitPoint": "FishingCabinDEnterPoint",
+      "toScene": "FishingCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinBEnterPoint",
+      "toScene": "LakeCabinB",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinBExitPoint"
+    },
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "TrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseBBackEnterPoint",
+      "toScene": "CoastalHouseB",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseBBackExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseBFrontEnterPoint",
+      "toScene": "CoastalHouseB",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseBFrontExitPoint"
+    },
+    {
+      "exitPoint": "GasStationFrontEnterPoint",
+      "toScene": "QuonsetGasStation",
+      "type": "ToIndoors",
+      "linkedPoint": "QuonsetGasStationFrontExitPoint"
+    },
+    {
+      "exitPoint": "GasStationBackEnterPoint",
+      "toScene": "QuonsetGasStation",
+      "type": "ToIndoors",
+      "linkedPoint": "QuonsetGasStationBackExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseFEnterPoint",
+      "toScene": "CoastalHouseF",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseFExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinCEnterPoint",
+      "toScene": "FishingCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "LakeCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "CoastalRegionExitPoint",
+      "toScene": "RavineTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "RavineExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinCEnterPoint",
+      "toScene": "LakeCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinFEnterPoint",
+      "toScene": "LakeCabinF",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinFExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseCFrontEnterPoint",
+      "toScene": "CoastalHouseC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseCBackEnterPoint",
+      "toScene": "CoastalHouseC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCBackExitPoint"
+    },
+    {
+      "exitPoint": "CoastalRegionExitPoint",
+      "toScene": "HighwayTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "HighwayTransitionExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "LakeCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseFEnterPoint",
+      "toScene": "CoastalHouseF",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseFExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinAEnterPoint",
+      "toScene": "FishingCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "TrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseAEnterPoint",
+      "toScene": "CoastalHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseAExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseEEnterPoint",
+      "toScene": "CoastalHouseE",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseEExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinDEnterPoint",
+      "toScene": "FishingCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDFrontEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDBackExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinEEnterPoint",
+      "toScene": "LakeCabinE",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinEExitPoint"
+    },
+    {
+      "exitPoint": "CoastalExitPoint",
+      "toScene": "MineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "MineExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+	{
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCBasementExitPoint"
+    },
+	{
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHBackExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHFrontExitPoint"
+    }
+  ],
+  "CommunityHallA": [
+    {
+      "exitPoint": "CommunityHallABackExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CommunityHallABackEnterPoint"
+    },
+    {
+      "exitPoint": "CommunityHallAFrontExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CommunityHallAFrontEnterPoint"
+    }
+  ],
+  "ConvenienceStoreA": [
+    {
+      "exitPoint": "ConvenienceStoreAExitPointA",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConvenienceStoreFrontEnterPoint"
+    },
+    {
+      "exitPoint": "ConvenienceStoreABackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConvenienceStoreBackEnterPoint"
+    }
+  ],
+  "CrashMountainRegion": [
+    {
+      "exitPoint": "MountainCaveBEnterPoint2",
+      "toScene": "MountainCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveBExitPoint2"
+    },
+    {
+      "exitPoint": "AshCaveAEnterPoint1",
+      "toScene": "AshCaveA",
+      "type": "ToCave",
+      "linkedPoint": "AshCaveAExitPoint1"
+    },
+    {
+      "exitPoint": "BlackrockCaveEnterPoint1",
+      "toScene": "BlackrockCaveA",
+      "type": "ToCave",
+      "linkedPoint": "BlackrockCaveExitPoint1"
+    },
+    {
+      "exitPoint": "MountainCaveBEnterPoint1",
+      "toScene": "MountainCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveBExitPoint1"
+    },
+    {
+      "exitPoint": "MountainCaveAEnterPoint1",
+      "toScene": "MountainCaveA",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveAExitPoint1"
+    },
+    {
+      "exitPoint": "TWMExitPoint1",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CrashMountainEnterPoint2"
+    },
+    {
+      "exitPoint": "CrashMountainExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CrashMountainEnterPoint"
+    },
+    {
+      "exitPoint": "MountainCaveAEnterPoint2",
+      "toScene": "MountainCaveA",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveAExitPoint2"
+    }
+  ],
+  "Dam": [
+    {
+      "exitPoint": "DamTransitionMysteryDoor",
+      "toScene": "DamTransitionZone",
+      "type": "ToIndoors",
+      "linkedPoint": "DamMysteryDoor"
+    },
+    {
+      "exitPoint": "DamAExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "DamInteriorEnterPoint"
+    }
+  ],
+  "DamCaveTransitionZone": [
+    {
+      "exitPoint": "DamCaveExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "DamCaveEnterPoint1"
+    },
+    {
+      "exitPoint": "DamRiverEnterPoint1",
+      "toScene": "DamRiverTransitionZoneB",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "DamCaveEnterPoint2"
+    }
+  ],
+  "DamRiverTransitionZoneB": [
+    {
+      "exitPoint": "DamCaveEnterPoint2",
+      "toScene": "DamCaveTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "DamRiverEnterPoint1"
+    },
+    {
+      "exitPoint": "DamWindowEnterPoint",
+      "toScene": "DamTransitionZone",
+      "type": "ToIndoors",
+      "linkedPoint": "DamRiverEnterPoint2"
+    }
+  ],
+  "DamTrailerB": [
+    {
+      "exitPoint": "TrailerBExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerBEnterPoint"
+    }
+  ],
+  "DamTransitionZone": [
+    {
+      "exitPoint": "DamMysteryDoor",
+      "toScene": "Dam",
+      "type": "ToIndoors",
+      "linkedPoint": "DamTransitionMysteryDoor"
+    },
+    {
+      "exitPoint": "DamRiverEnterPoint2",
+      "toScene": "DamRiverTransitionZoneB",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "DamWindowEnterPoint"
+    }
+  ],
+  "FarmHouseA": [
+    {
+      "exitPoint": "FarmHouseAPorchExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FarmHouseAPorchEnterPoint"
+    },
+    {
+      "exitPoint": "FarmHouseABasement_houseEnter",
+      "toScene": "FarmHouseABasement",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseABasementEnterPoint"
+    },
+    {
+      "exitPoint": "FarmHouseASideExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FarmHouseASideEnterPoint"
+    },
+    {
+      "exitPoint": "FarmHouseAFrontExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FarmHouseAFrontEnterPoint"
+    }
+  ],
+  "FarmHouseABasement": [
+    {
+      "exitPoint": "FarmHouseABasementEnterPoint",
+      "toScene": "FarmHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseABasement_houseEnter"
+    },
+    {
+      "exitPoint": "FarmHouseABasementExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FarmHouseABasementEnterPoint"
+    }
+  ],
+  "FarmHouseB": [
+    {
+      "exitPoint": "FarmHouseBExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FarmHouseBEnterPoint"
+    }
+  ],
+  "FishingCabinA": [
+    {
+      "exitPoint": "LakeCabinAExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinAEnterPoint"
+    }
+  ],
+  "FishingCabinC": [
+    {
+      "exitPoint": "LakeCabinCExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinCEnterPoint"
+    }
+  ],
+  "FishingCabinD": [
+    {
+      "exitPoint": "LakeCabinDExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinDEnterPoint"
+    }
+  ],
+  "GreyMothersHouseA": [
+    {
+      "exitPoint": "GreyMotherHouseAExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "GreyMotherHouseAEnterPoint"
+    }
+  ],
+  "HighwayMineTransitionZone": [
+    {
+      "exitPoint": "HighwayMineExitPoint",
+      "toScene": "HighwayTransitionZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "HighwayTransitionExitPoint"
+    },
+    {
+      "exitPoint": "HighwayMineExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "WhalingExitPoint"
+    }
+  ],
+  "HighwayTransitionZone": [
+    {
+      "exitPoint": "HighwayTransitionExitPoint",
+      "toScene": "HighwayMineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "HighwayMineExitPoint"
+    },
+    {
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCBasementExitPoint"
+    },
+    {
+      "exitPoint": "HighwayTransitionExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CoastalRegionExitPoint"
+    }
+  ],
+  "HouseBasementC": [
+    {
+      "exitPoint": "CoastalHouseCBasementExitPoint",
+      "toScene": "HighwayTransitionZone",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseBasementCEnterPoint"
+    }
+  ],
+  "HouseBasementPV": [
+    {
+      "exitPoint": "HouseBasementPVExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseBasementPVEnterPoint"
+    }
+  ],
+  "HubCave": [
+    {
+      "exitPoint": "HubCaveExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "HubCaveEnterPointB"
+    },
+    {
+      "exitPoint": "HubCaveExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "HubCaveEnterPointC"
+    },
+    {
+      "exitPoint": "HubCaveExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "HubCaveEnterPointA"
+    }
+  ],
+  "HubRegion": [
+    {
+      "exitPoint": "HubExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "AirfieldExitPoint"
+    },
+    {
+      "exitPoint": "HubExitPoint",
+      "toScene": "LongRailTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "LongTransitionExitPoint"
+    },
+    {
+      "exitPoint": "HubExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "PassExitPoint"
+    },
+    {
+      "exitPoint": "HubExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "MiningExitPoint"
+    }
+  ],
+  "HuntingLodgeA": [
+    {
+      "exitPoint": "HuntinLodgeBExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HuntingLodgeAFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HuntingLodgeAExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HuntingLodgeABackEnterPoint"
+    }
+  ],
+  "IceCaveA": [
+    {
+      "exitPoint": "RiverValleyCaveA_ExitPoint3",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveAEnterPoint3"
+    },
+    {
+      "exitPoint": "RiverValleyCaveA_ExitPoint2",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveAEnterPoint2"
+    },
+    {
+      "exitPoint": "RiverValleyCaveA_ExitPoint1",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveAEnterPoint1"
+    }
+  ],
+  "IceCaveB": [
+    {
+      "exitPoint": "RiverValleyCaveB_ExitPoint3",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveBEnterPoint3"
+    },
+    {
+      "exitPoint": "RiverValleyCaveB_ExitPoint2",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveBEnterPoint2"
+    },
+    {
+      "exitPoint": "RiverValleyCaveB_ExitPoint1",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RiverValleyCaveBEnterPoint1"
+    }
+  ],
+  "LakeCabinA": [
+    {
+      "exitPoint": "LakeCabinAExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinAEnterPoint"
+    }
+  ],
+  "LakeCabinB": [
+    {
+      "exitPoint": "LakeCabinBExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinBEnterPoint"
+    }
+  ],
+  "LakeCabinC": [
+    {
+      "exitPoint": "LakeCabinCExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinCEnterPoint"
+    }
+  ],
+  "LakeCabinD": [
+    {
+      "exitPoint": "LakeCabinDExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinDEnterPoint"
+    }
+  ],
+  "LakeCabinE": [
+    {
+      "exitPoint": "LakeCabinEExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinEEnterPoint"
+    }
+  ],
+  "LakeCabinF": [
+    {
+      "exitPoint": "LakeCabinFExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinFEnterPoint"
+    }
+  ],
+  "LakeRegion": [
+    {
+      "exitPoint": "CabinEnterPoint",
+      "toScene": "SafeHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "CabinExitPoint"
+    },
+    {
+      "exitPoint": "LakeRegionExitPoint",
+      "toScene": "RavineTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "RavineExitPoint"
+    },
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "TrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinEEnterPoint",
+      "toScene": "LakeCabinE",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinEExitPoint"
+    },
+    {
+      "exitPoint": "MountainTownCaveBEnterPoint2",
+      "toScene": "MountainTownCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainTownCaveBExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinAEnterPoint",
+      "toScene": "LakeCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+    {
+      "exitPoint": "LakeRegionExitPoint",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "MarshExitPoint"
+    },
+    {
+      "exitPoint": "CampOfficeFrontEnterPoint",
+      "toScene": "CampOffice",
+      "type": "ToIndoors",
+      "linkedPoint": "CampOfficeFrontExitPoint"
+    },
+    {
+      "exitPoint": "CampOfficeBackEnterPoint",
+      "toScene": "CampOffice",
+      "type": "ToIndoors",
+      "linkedPoint": "CampOfficeBackExitPoint"
+    },
+    {
+      "exitPoint": "DamInteriorEnterPoint",
+      "toScene": "Dam",
+      "type": "ToIndoors",
+      "linkedPoint": "DamAExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "DamTrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinCEnterPoint",
+      "toScene": "LakeCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinFEnterPoint",
+      "toScene": "LakeCabinF",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinFExitPoint"
+    },
+	{
+      "exitPoint": "LakeCabinBEnterPoint",
+      "toScene": "LakeCabinB",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinBExitPoint"
+    },	
+	{
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "LakeCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    }
+  ],
+  "LighthouseA": [
+    {
+      "exitPoint": "LighthouseTopExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LighthouseTopEnterPoint"
+    },
+    {
+      "exitPoint": "LighthouseBottomExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LighthouseBottomEnterPoint"
+    }
+  ],
+  "LongRailTransitionZone": [
+    {
+      "exitPoint": "CaveEnterPointUpper",
+      "toScene": "LongTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "CaveExitPointUpper"
+    },
+    {
+      "exitPoint": "CaveEnterPointLower",
+      "toScene": "LongTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "CaveExitPointLower"
+    },
+    {
+      "exitPoint": "LongTransitionExitPoint",
+      "toScene": "HubRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "HubExitPoint"
+    },
+    {
+      "exitPoint": "DLCExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "TracksExitPoint"
+    }
+  ],
+  "LongTransitionCave": [
+    {
+      "exitPoint": "CaveExitPointLower",
+      "toScene": "LongRailTransitionZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveEnterPointLower"
+    },
+    {
+      "exitPoint": "CaveExitPointUpper",
+      "toScene": "LongRailTransitionZone",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CaveEnterPointUpper"
+    }
+  ],
+  "MaintenanceShedA": [
+    {
+      "exitPoint": "MainteneceShedAExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MainteneceShedAEnterPoint"
+    },
+    {
+      "exitPoint": "MainteneceShedCExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MainteneceShedCEnterPoint"
+    },
+    {
+      "exitPoint": "MainteneceShedBExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MainteneceShedBEnterPoint"
+    }
+  ],
+  "MaintenanceShedB": [
+    {
+      "exitPoint": "MaintenanceShedB2ExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MaintenanceShedB2EnterPoint"
+    }
+  ],
+  "MarshRegion": [
+    {
+      "exitPoint": "MarshRegionExitPoint",
+      "toScene": "CanneryMarshTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "CanneryRegionExitPoint"
+    },
+    {
+      "exitPoint": "CaveDEnterPoint1",
+      "toScene": "CaveD",
+      "type": "ToCave",
+      "linkedPoint": "CaveDExitPoint1"
+    },
+    {
+      "exitPoint": "CaveDEnterPoint2",
+      "toScene": "CaveD",
+      "type": "ToCave",
+      "linkedPoint": "CaveDExitPoint2"
+    },
+    {
+      "exitPoint": "MarshMTExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "MiltonRegionExitPoint"
+    },
+    {
+      "exitPoint": "MarshExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "LakeRegionExitPoint"
+    },
+    {
+      "exitPoint": "MarshExitPoint",
+      "toScene": "TracksRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "TracksExitPoint"
+    }
+  ],
+  "MiltonHouseA": [
+    {
+      "exitPoint": "MiltonHouseAExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseAEnterPoint"
+    }
+  ],
+  "MiltonHouseC": [
+    {
+      "exitPoint": "MiltonHouseCBackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseCBackEnterPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseCFrontExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseCFrontEnterPoint"
+    }
+  ],
+  "MiltonHouseD": [
+    {
+      "exitPoint": "MiltonHouseDFrontExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseDFrontEnterPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseDBackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseDBackEnterPoint"
+    }
+  ],
+  "MiltonHouseF1": [
+    {
+      "exitPoint": "MiltonHouseF1ExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseFEnterPoint"
+    }
+  ],
+  "MiltonHouseF2": [
+    {
+      "exitPoint": "MiltonHouseF2ExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseFEnterPoint"
+    }
+  ],
+  "MiltonHouseF3": [
+    {
+      "exitPoint": "MiltonHouseF3ExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseFEnterPoint"
+    }
+  ],
+  "MiltonHouseH1": [
+    {
+      "exitPoint": "HouseH1FrontExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HouseH1BackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHBackEnterPoint"
+    }
+  ],
+  "MiltonHouseH2": [
+    {
+      "exitPoint": "HouseH2FrontExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HouseH2BackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHBackEnterPoint"
+    }
+  ],
+  "MiltonHouseH3": [
+    {
+      "exitPoint": "HouseH3FrontExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HouseH3BackExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHBackEnterPoint"
+    }
+  ],
+  "MiltonTrailerB": [
+    {
+      "exitPoint": "MiltonTrailerBExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonTrailerBEnterPoint"
+    }
+  ],
+  "MineConcentratorBuilding": [
+    {
+      "exitPoint": "MineConveyorEnterPoint",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineConveyorExitPoint"
+    },
+    {
+      "exitPoint": "HeadframeDoor2ExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HeadframeDoor2EnterPoint"
+    },
+    {
+      "exitPoint": "ConcentratorUpperExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConcentratorUpperEnterPoint"
+    },
+    {
+      "exitPoint": "ConcentratorLowerExitPoint2",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConcentratorLowerEnterPoint2"
+    },
+    {
+      "exitPoint": "MineShaftEnterPointUpper",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineShaftExitPointUpper"
+    },
+    {
+      "exitPoint": "ConveyorDoor1ExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConveyorDoor1EnterPoint"
+    },
+    {
+      "exitPoint": "ConveyorDoor2ExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConveyorDoor2EnterPoint"
+    },
+    {
+      "exitPoint": "ConcentratorLowerExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "ConcentratorLowerEnterPoint"
+    },
+    {
+      "exitPoint": "HeadframeDoorExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HeadframeDoorEnterPoint"
+    },
+    {
+      "exitPoint": "MineShaftEnterPointLower",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineShaftExitPointLower"
+    },
+    {
+      "exitPoint": "MineShaftEnterPointMid",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineShaftExitPointMid"
+    }
+  ],
+  "MineTransitionZone": [
+    {
+      "exitPoint": "MineExitPoint2",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CoastalExitPoint2"
+    },
+    {
+      "exitPoint": "MineExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "CoastalExitPoint"
+    },
+    {
+      "exitPoint": "MineExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RuralExitPoint"
+    }
+  ],
+  "MiningRegion": [
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+    {
+      "exitPoint": "ConcentratorUpperEnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "ConcentratorUpperExitPoint"
+    },
+    {
+      "exitPoint": "ConcentratorLowerEnterPoint2",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "ConcentratorLowerExitPoint2"
+    },
+    {
+      "exitPoint": "ConveyorDoor1EnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "ConveyorDoor1ExitPoint"
+    },
+    {
+      "exitPoint": "MinePitEnterPoint",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MinePitExitPoint"
+    },
+    {
+      "exitPoint": "MineTrackEnterPoint",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineTrackExitPoint"
+    },
+    {
+      "exitPoint": "MineOldEnterPoint",
+      "toScene": "MiningRegionMine",
+      "type": "ToCave",
+      "linkedPoint": "MineOldExitPoint"
+    },
+    {
+      "exitPoint": "ConveyorDoor2EnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "ConveyorDoor2ExitPoint"
+    },
+    {
+      "exitPoint": "HeadframeDoorEnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "HeadframeDoorExitPoint"
+    },
+    {
+      "exitPoint": "MiningExitPoint",
+      "toScene": "HubRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "HubExitPoint"
+    },
+    {
+      "exitPoint": "HeadframeDoor2EnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "HeadframeDoor2ExitPoint"
+    },
+    {
+      "exitPoint": "ConcentratorLowerEnterPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "ConcentratorLowerExitPoint"
+    },
+    {
+      "exitPoint": "HubCaveEnterPointA",
+      "toScene": "HubCave",
+      "type": "ToCave",
+      "linkedPoint": "HubCaveExitPoint"
+    },
+    {
+      "exitPoint": "PumpHouseEnterPoint2",
+      "toScene": "PumpHouse",
+      "type": "ToIndoors",
+      "linkedPoint": "PumpHouseExitPoint2"
+    },
+    {
+      "exitPoint": "PumpHouseEnterPoint1",
+      "toScene": "PumpHouse",
+      "type": "ToIndoors",
+      "linkedPoint": "PumpHouseExitPoint1"
+    }
+  ],
+  "MiningRegionMine": [
+    {
+      "exitPoint": "MineShaftExitPointLower",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "MineShaftEnterPointLower"
+    },
+    {
+      "exitPoint": "MineOldExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MineOldEnterPoint"
+    },
+    {
+      "exitPoint": "MineShaftExitPointMid",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "MineShaftEnterPointMid"
+    },
+    {
+      "exitPoint": "MineShaftExitPointUpper",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "MineShaftEnterPointUpper"
+    },
+    {
+      "exitPoint": "MineTrackExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MineTrackEnterPoint"
+    },
+    {
+      "exitPoint": "MinePitExitPoint",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MinePitEnterPoint"
+    },
+    {
+      "exitPoint": "MineConveyorExitPoint",
+      "toScene": "MineConcentratorBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "MineConveyorEnterPoint"
+    }
+  ],
+  "MountainCaveA": [
+    {
+      "exitPoint": "MountainCaveAExitPoint2",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCaveAEnterPoint2"
+    },
+    {
+      "exitPoint": "MountainCaveAExitPoint1",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCaveAEnterPoint1"
+    }
+  ],
+  "MountainCaveB": [
+    {
+      "exitPoint": "MountainCaveBExitPoint1",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCaveBEnterPoint1"
+    },
+    {
+      "exitPoint": "MountainCaveBExitPoint2",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCaveBEnterPoint2"
+    }
+  ],
+  "MountainPassBasement": [
+    {
+      "exitPoint": "BasementExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BasementEnterPoint"
+    }
+  ],
+  "MountainPassBuriedCabin": [
+    {
+      "exitPoint": "BuriedCabinExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "BuriedCabinEnterPoint"
+    }
+  ],
+  "MountainPassCabinA": [
+    {
+      "exitPoint": "MountainPassCabinAExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MountainPassCabinAEnterPoint"
+    }
+  ],
+  "MountainPassCaveA": [
+    {
+      "exitPoint": "ValleyCaveExitPointD",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCavePassAEnterPoint4"
+    },
+    {
+      "exitPoint": "ValleyCaveExitPointB",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainPassCaveAEnterPoint2"
+    },
+    {
+      "exitPoint": "ValleyCaveExitPointC",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCavePassAEnterPoint3"
+    },
+    {
+      "exitPoint": "ValleyCaveExitPointA",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCavePassAEnterPoint1"
+    }
+  ],
+  "MountainPassCaveB": [
+    {
+      "exitPoint": "MountainCaveExitPointA",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainCavePassBEnterPoint1"
+    },
+    {
+      "exitPoint": "MountainCaveExitPointB",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainPassCaveBEnterPoint2"
+    }
+  ],
+  "MountainPassRegion": [
+    {
+      "exitPoint": "RadarBuildingEnterPoint",
+      "toScene": "RadarBuilding",
+      "type": "ToIndoors",
+      "linkedPoint": "RadarBuildingExitPoint"
+    },
+    {
+      "exitPoint": "BasementEnterPoint",
+      "toScene": "MountainPassBasement",
+      "type": "ToIndoors",
+      "linkedPoint": "BasementExitPoint"
+    },
+    {
+      "exitPoint": "MountainPassCabinAEnterPoint",
+      "toScene": "MountainPassCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "MountainPassCabinAExitPoint"
+    },
+    {
+      "exitPoint": "BuriedCabinEnterPoint",
+      "toScene": "MountainPassBuriedCabin",
+      "type": "ToIndoors",
+      "linkedPoint": "BuriedCabinExitPoint"
+    },
+    {
+      "exitPoint": "MountainCavePassAEnterPoint3",
+      "toScene": "MountainPassCaveA",
+      "type": "ToCave",
+      "linkedPoint": "ValleyCaveExitPointC"
+    },
+    {
+      "exitPoint": "MountainCavePassBEnterPoint1",
+      "toScene": "MountainPassCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveExitPointA"
+    },
+    {
+      "exitPoint": "PassExitPoint",
+      "toScene": "HubRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "HubExitPoint"
+    },
+    {
+      "exitPoint": "MountainCavePassAEnterPoint4",
+      "toScene": "MountainPassCaveA",
+      "type": "ToCave",
+      "linkedPoint": "ValleyCaveExitPointD"
+    },
+    {
+      "exitPoint": "HubCaveEnterPointC",
+      "toScene": "HubCave",
+      "type": "ToCave",
+      "linkedPoint": "HubCaveExitPoint"
+    },
+    {
+      "exitPoint": "MountainPassCaveBEnterPoint2",
+      "toScene": "MountainPassCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainCaveExitPointB"
+    },
+    {
+      "exitPoint": "MountainCavePassAEnterPoint1",
+      "toScene": "MountainPassCaveA",
+      "type": "ToCave",
+      "linkedPoint": "ValleyCaveExitPointA"
+    },
+    {
+      "exitPoint": "MountainPassCaveAEnterPoint2",
+      "toScene": "MountainPassCaveA",
+      "type": "ToCave",
+      "linkedPoint": "ValleyCaveExitPointB"
+    },
+	{
+      "exitPoint": "EnterPoint",
+      "toScene": "BunkerA",
+      "type": "ToBunker",
+      "linkedPoint": "BunkerAExitPoint"
+    }
+  ],
+  "MountainTownCaveA": [
+    {
+      "exitPoint": "MountainTownCaveAExitPoint2",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainTownCaveAEnterPoint2"
+    },
+    {
+      "exitPoint": "MountainTownCaveAExitPoint1",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainTownCaveAEnterPoint1"
+    }
+  ],
+  "MountainTownCaveB": [
+    {
+      "exitPoint": "MountainTownCaveBExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainTownCaveBEnterPoint2"
+    },
+    {
+      "exitPoint": "MountainTownCaveBExitPoint3",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "MountainTownCaveBEnterPoint3"
+    }
+  ],
+  "MountainTownRegion": [
+    {
+      "exitPoint": "MountainTownCaveAEnterPoint1",
+      "toScene": "MountainTownCaveA",
+      "type": "ToCave",
+      "linkedPoint": "MountainTownCaveAExitPoint1"
+    },
+    {
+      "exitPoint": "MiltonHouseFEnterPoint",
+      "toScene": "MiltonHouseF3",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseF3ExitPoint"
+    },
+    {
+      "exitPoint": "MiltonTrailerBEnterPoint",
+      "toScene": "MiltonTrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonTrailerBExitPoint"
+    },
+    {
+      "exitPoint": "MiltonRegionExitPoint",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "MarshMTExitPoint"
+    },
+    {
+      "exitPoint": "ChruchBEnterPoint",
+      "toScene": "ChurchB",
+      "type": "ToIndoors",
+      "linkedPoint": "ChurchBExitPoint"
+    },
+    {
+      "exitPoint": "MountainTownCaveAEnterPoint2",
+      "toScene": "MountainTownCaveA",
+      "type": "ToCave",
+      "linkedPoint": "MountainTownCaveAExitPoint2"
+    },
+    {
+      "exitPoint": "MountainTownCaveBEnterPoint3",
+      "toScene": "MountainTownCaveB",
+      "type": "ToCave",
+      "linkedPoint": "MountainTownCaveBExitPoint3"
+    },
+    {
+      "exitPoint": "FarmHouseBEnterPoint",
+      "toScene": "FarmHouseB",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseBExitPoint"
+    },
+    {
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "MiltonHouseH3",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH3BackExitPoint"
+    },
+    {
+      "exitPoint": "PostOfficeAEnterPoint",
+      "toScene": "PostOfficeA",
+      "type": "ToIndoors",
+      "linkedPoint": "PostOfficeAExitPointA"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "MiltonHouseH3",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH3FrontExitPoint"
+    },
+    {
+      "exitPoint": "BankAEnterPoint",
+      "toScene": "BankA",
+      "type": "ToIndoors",
+      "linkedPoint": "BankAExitPointA"
+    },
+    {
+      "exitPoint": "ConvenienceStoreBackEnterPoint",
+      "toScene": "ConvenienceStoreA",
+      "type": "ToIndoors",
+      "linkedPoint": "ConvenienceStoreABackExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseFEnterPoint",
+      "toScene": "MiltonHouseF1",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseF1ExitPoint"
+    },
+    {
+      "exitPoint": "ConvenienceStoreFrontEnterPoint",
+      "toScene": "ConvenienceStoreA",
+      "type": "ToIndoors",
+      "linkedPoint": "ConvenienceStoreAExitPointA"
+    },
+    {
+      "exitPoint": "MiltonHouseFEnterPoint",
+      "toScene": "MiltonHouseF2",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseF2ExitPoint"
+    },
+    {
+      "exitPoint": "RVTRansitionEnterPoint1",
+      "toScene": "RiverValleyTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "RVTransitionExitPoint1"
+    },
+    {
+      "exitPoint": "MiltonHouseDFrontEnterPoint",
+      "toScene": "MiltonHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseDFrontExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseDBackEnterPoint",
+      "toScene": "MiltonHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseDBackExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseCBackEnterPoint",
+      "toScene": "MiltonHouseC",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseCBackExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseCFrontEnterPoint",
+      "toScene": "MiltonHouseC",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseCFrontExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseAEnterPoint",
+      "toScene": "MiltonHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseAExitPoint"
+    },
+    {
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "MiltonHouseH2",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH2BackExitPoint"
+    },
+    {
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "MiltonHouseH1",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH1BackExitPoint"
+    },
+    {
+      "exitPoint": "GreyMotherHouseAEnterPoint",
+      "toScene": "GreyMothersHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "GreyMotherHouseAExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "MiltonHouseH2",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH2FrontExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "MiltonHouseH1",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseH1FrontExitPoint"
+    },
+	{
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseCBasementExitPoint"
+    },
+	{
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    }
+  ],
+  "PostOfficeA": [
+    {
+      "exitPoint": "PostOfficeAExitPointA",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "PostOfficeAEnterPoint"
+    }
+  ],
+  "PrepperCacheA": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheAEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheB": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheBEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheBInterloper": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheC": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheCEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheD": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheDEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheE": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheEEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheEmpty": [
+    {
+      "exitPoint": "PrepperCacheEmptyExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheF": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheFEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PumpHouse": [
+    {
+      "exitPoint": "PumpHouseExitPoint1",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "PumpHouseEnterPoint1"
+    },
+    {
+      "exitPoint": "PumpHouseExitPoint2",
+      "toScene": "MiningRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "PumpHouseEnterPoint2"
+    }
+  ],
+  "QuonsetGasStation": [
+    {
+      "exitPoint": "QuonsetGasStationFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "GasStationFrontEnterPoint"
+    },
+    {
+      "exitPoint": "QuonsetGasStationBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "GasStationBackEnterPoint"
+    }
+  ],
+  "RadarBuilding": [
+    {
+      "exitPoint": "RadarBuildingExitPoint",
+      "toScene": "MountainPassRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RadarBuildingEnterPoint"
+    }
+  ],
+  "RadioControlHut": [
+    {
+      "exitPoint": "RadioControlHutExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RadioControlHutEnterPoint"
+    }
+  ],
+  "RadioControlHutB": [
+    {
+      "exitPoint": "RadioControlHutExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RadioControlHutEnterPoint"
+    }
+  ],
+  "RadioControlHutC": [
+    {
+      "exitPoint": "RadioControlHutExitPoint",
+      "toScene": "BlackrockRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RadioControlHutEnterPoint"
+    }
+  ],
+  "RavineTransitionZone": [
+    {
+      "exitPoint": "RavineExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "LakeRegionExitPoint"
+    },
+    {
+      "exitPoint": "RavineExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CanneryRegionExitPoint"
+    },
+    {
+      "exitPoint": "RavineExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CoastalRegionExitPoint"
+    }
+  ],
+  "RiverValleyRegion": [
+    {
+      "exitPoint": "RiverValleyCaveBEnterPoint3",
+      "toScene": "IceCaveB",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveB_ExitPoint3"
+    },
+    {
+      "exitPoint": "RVTRansitionEnterPoint2",
+      "toScene": "RiverValleyTransitionCave",
+      "type": "ToCave",
+      "linkedPoint": "RVTransitionExitPoint2"
+    },
+    {
+      "exitPoint": "RiverValleyCaveBEnterPoint1",
+      "toScene": "IceCaveB",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveB_ExitPoint1"
+    },
+    {
+      "exitPoint": "RiverValleyCaveAEnterPoint1",
+      "toScene": "IceCaveA",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveA_ExitPoint1"
+    },
+    {
+      "exitPoint": "RiverValleyCaveAEnterPoint2",
+      "toScene": "IceCaveA",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveA_ExitPoint2"
+    },
+    {
+      "exitPoint": "RiverValleyCaveAEnterPoint3",
+      "toScene": "IceCaveA",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveA_ExitPoint3"
+    },
+    {
+      "exitPoint": "RiverValleyCaveBEnterPoint2",
+      "toScene": "IceCaveB",
+      "type": "ToCave",
+      "linkedPoint": "RiverValleyCaveB_ExitPoint2"
+    },
+    {
+      "exitPoint": "EnterPoint",
+      "toScene": "BunkerC",
+      "type": "ToBunker",
+      "linkedPoint": "BunkerCExitPoint"
+    }
+  ],
+  "RiverValleyTransitionCave": [
+    {
+      "exitPoint": "RVTransitionExitPoint2",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RVTRansitionEnterPoint2"
+    },
+    {
+      "exitPoint": "RVTransitionExitPoint1",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "RVTRansitionEnterPoint1"
+    }
+  ],
+  "RuralRegion": [
+    {
+      "exitPoint": "DamCaveEnterPoint1",
+      "toScene": "DamCaveTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "DamCaveExitPoint"
+    },
+    {
+      "exitPoint": "FarmHouseASideEnterPoint",
+      "toScene": "FarmHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseASideExitPoint"
+    },
+    {
+      "exitPoint": "FarmHouseABasementEnterPoint",
+      "toScene": "FarmHouseABasement",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseABasementExitPoint"
+    },
+    {
+      "exitPoint": "FarmHouseAFrontEnterPoint",
+      "toScene": "FarmHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseAFrontExitPoint"
+    },
+    {
+      "exitPoint": "FarmHouseAPorchEnterPoint",
+      "toScene": "FarmHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "FarmHouseAPorchExitPoint"
+    },
+    {
+      "exitPoint": "RadioControlHutEnterPoint",
+      "toScene": "RadioControlHut",
+      "type": "ToIndoors",
+      "linkedPoint": "RadioControlHutExitPoint"
+    },
+    {
+      "exitPoint": "BarnHouseASideEnterPoint",
+      "toScene": "BarnHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "BarnHouseASideExitPoint"
+    },
+    {
+      "exitPoint": "BarnHouseAFrontEnterPoint",
+      "toScene": "BarnHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "BarnHouseAFrontExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseAEnterPoint",
+      "toScene": "MiltonHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseAExitPoint"
+    },
+    {
+      "exitPoint": "CrashMountainEnterPoint",
+      "toScene": "CrashMountainRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CrashMountainExitPoint"
+    },
+    {
+      "exitPoint": "CanyonRoadEnterPoint1",
+      "toScene": "CanyonRoadTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "CanyonRoadExitPoint"
+    },
+    {
+      "exitPoint": "HouseBasementPVEnterPoint",
+      "toScene": "HouseBasementPV",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseBasementPVExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinAEnterPoint",
+      "toScene": "FishingCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+    {
+      "exitPoint": "CaveBEnterPoint",
+      "toScene": "CaveB",
+      "type": "ToCave",
+      "linkedPoint": "CaveBExitPoint"
+    },
+    {
+      "exitPoint": "ChurchCEnterPoint",
+      "toScene": "ChurchC",
+      "type": "ToIndoors",
+      "linkedPoint": "ChurchCExitPoint"
+    },
+    {
+      "exitPoint": "RuralStoreABackEnterPoint",
+      "toScene": "RuralStoreA",
+      "type": "ToIndoors",
+      "linkedPoint": "RuralStoreABackExitPoint"
+    },
+    {
+      "exitPoint": "RuralStoreAFrontEnterPoint",
+      "toScene": "RuralStoreA",
+      "type": "ToIndoors",
+      "linkedPoint": "RuralStoreAFrontExitPoint"
+    },
+    {
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHBackExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHFrontExitPoint"
+    },
+    {
+      "exitPoint": "BarnHouseBFrontEnterPoint",
+      "toScene": "BarnHouseB",
+      "type": "ToIndoors",
+      "linkedPoint": "BarnHouseBFrontExitPoint"
+    },
+    {
+      "exitPoint": "RuralExitPoint",
+      "toScene": "MineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "MineExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseAEnterPoint",
+      "toScene": "CoastalHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseAExitPoint"
+    },
+    {
+      "exitPoint": "PrepperCacheEmptyEnterPoint",
+      "toScene": "PrepperCacheEmpty",
+      "type": "ToBunker",
+      "linkedPoint": "PrepperCacheEmptyExitPoint"
+    },
+    {
+      "exitPoint": "CommunityHallABackEnterPoint",
+      "toScene": "CommunityHallA",
+      "type": "ToIndoors",
+      "linkedPoint": "CommunityHallABackExitPoint"
+    },
+    {
+      "exitPoint": "CommunityHallAFrontEnterPoint",
+      "toScene": "CommunityHallA",
+      "type": "ToIndoors",
+      "linkedPoint": "CommunityHallAFrontExitPoint"
+    },
+	{
+      "exitPoint": "CoastalHouseFEnterPoint",
+      "toScene": "CoastalHouseF",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseFExitPoint"
+    },
+    {
+      "exitPoint": "EnterPoint",
+      "toScene": "BunkerB",
+      "type": "ToBunker",
+      "linkedPoint": "BunkerBExitPoint"
+    },
+	{
+      "exitPoint": "CoastalHouseDFrontEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDBackExitPoint"
+    }
+  ],
+  "RuralStoreA": [
+    {
+      "exitPoint": "RuralStoreABackExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RuralStoreABackEnterPoint"
+    },
+    {
+      "exitPoint": "RuralStoreAFrontExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "RuralStoreAFrontEnterPoint"
+    }
+  ],
+  "SafeHouseA": [
+    {
+      "exitPoint": "CabinExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CabinEnterPoint"
+    }
+  ],
+  "TracksRegion": [
+    {
+      "exitPoint": "MainteneceShedBEnterPoint",
+      "toScene": "MaintenanceShedA",
+      "type": "ToIndoors",
+      "linkedPoint": "MainteneceShedBExitPoint"
+    },
+    {
+      "exitPoint": "MainteneceShedCEnterPoint",
+      "toScene": "MaintenanceShedA",
+      "type": "ToIndoors",
+      "linkedPoint": "MainteneceShedCExitPoint"
+    },
+    {
+      "exitPoint": "TracksExitPoint",
+      "toScene": "MarshRegion",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "MarshExitPoint"
+    },
+    {
+      "exitPoint": "HuntingLodgeAFrontEnterPoint",
+      "toScene": "HuntingLodgeA",
+      "type": "ToIndoors",
+      "linkedPoint": "HuntinLodgeBExitPoint"
+    },
+    {
+      "exitPoint": "MainteneceShedAEnterPoint",
+      "toScene": "MaintenanceShedA",
+      "type": "ToIndoors",
+      "linkedPoint": "MainteneceShedAExitPoint"
+    },
+    {
+      "exitPoint": "HuntingLodgeABackEnterPoint",
+      "toScene": "HuntingLodgeA",
+      "type": "ToIndoors",
+      "linkedPoint": "HuntingLodgeAExitPoint"
+    },
+    {
+      "exitPoint": "TracksExitPoint",
+      "toScene": "LongRailTransitionZone",
+      "type": "ToOutdoorsFromOutdoors",
+      "linkedPoint": "DLCExitPoint"
+    }
+  ],
+  "TrailerA": [
+    {
+      "exitPoint": "TrailerAExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerAEnterPoint"
+    }
+  ],
+  "TrailerB": [
+    {
+      "exitPoint": "TrailerBExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerBEnterPoint"
+    }
+  ],
+  "TrailerC": [
+    {
+      "exitPoint": "TrailerCExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerCEnterPoint"
+    }
+  ],
+  "TrailerD": [
+    {
+      "exitPoint": "TrailerDExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerDEnterPoint"
+    }
+  ],
+  "TrailerE": [
+    {
+      "exitPoint": "TrailerEExitPoint",
+      "toScene": "CanyonRoadTransitionZone",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerEEnterPoint"
+    }
+  ],
+  "TrailerSShape": [
+    {
+      "exitPoint": "TrailerSExitPoint1",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerSEnterPoint1"
+    },
+    {
+      "exitPoint": "TrailerSExitPoint2",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerSEnterPoint2"
+    },
+    {
+      "exitPoint": "TrailerSExitPoint3",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerSEnterPoint3"
+    }
+  ],
+  "WhalingMine": [
+    {
+      "exitPoint": "Mine1ExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "Whale1ExitPoint"
+    },
+    {
+      "exitPoint": "Mine2ExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromCave",
+      "linkedPoint": "Whale2ExitPoint"
+    }
+  ],
+  "WhalingShipA": [
+    {
+      "exitPoint": "ShipHullExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WhalingShipEnterHull"
+    },
+    {
+      "exitPoint": "ShipDoorExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WhalingShipEnterDoor"
+    }
+  ],
+  "WhalingStationRegion": [
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "TrailerSEnterPoint3",
+      "toScene": "TrailerSShape",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerSExitPoint3"
+    },
+    {
+      "exitPoint": "Whale2ExitPoint",
+      "toScene": "WhalingMine",
+      "type": "ToCave",
+      "linkedPoint": "Mine2ExitPoint"
+    },
+    {
+      "exitPoint": "TrailerSEnterPoint1",
+      "toScene": "TrailerSShape",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerSExitPoint1"
+    },
+    {
+      "exitPoint": "Whale1ExitPoint",
+      "toScene": "WhalingMine",
+      "type": "ToCave",
+      "linkedPoint": "Mine1ExitPoint"
+    },
+    {
+      "exitPoint": "WarehouseBEnterPoint",
+      "toScene": "WhalingWarehouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "WarehouseBExitPoint"
+    },
+    {
+      "exitPoint": "CaveCEnterPoint",
+      "toScene": "CaveC",
+      "type": "ToCave",
+      "linkedPoint": "CaveCExitPoint"
+    },
+    {
+      "exitPoint": "WhalingShipEnterDoor",
+      "toScene": "WhalingShipA",
+      "type": "ToIndoors",
+      "linkedPoint": "ShipDoorExitPoint"
+    },
+    {
+      "exitPoint": "LighthouseTopEnterPoint",
+      "toScene": "LighthouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "LighthouseTopExitPoint"
+    },
+    {
+      "exitPoint": "LighthouseBottomEnterPoint",
+      "toScene": "LighthouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "LighthouseBottomExitPoint"
+    },
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDEчшеPoint"
+    },
+    {
+      "exitPoint": "WhalingExitPoint",
+      "toScene": "HighwayMineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "HighwayMineExitPoint"
+    },
+    {
+      "exitPoint": "WhalingShipEnterHull",
+      "toScene": "WhalingShipA",
+      "type": "ToIndoors",
+      "linkedPoint": "ShipHullExitPoint"
+    },
+    {
+      "exitPoint": "TrailerSEnterPoint2",
+      "toScene": "TrailerSShape",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerSExitPoint2"
+    },
+    {
+      "exitPoint": "WarehouseAEnterPoint",
+      "toScene": "WhalingWarehouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "WarehouseAExitPoint"
+    }
+  ],
+  "WhalingWarehouseA": [
+    {
+      "exitPoint": "WarehouseAExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WarehouseAEnterPoint"
+    },
+    {
+      "exitPoint": "WarehouseBExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WarehouseBEnterPoint"
+    }
+  ],
+  "WoodCabinA": [
+    {
+      "exitPoint": "WoodCabinAExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WoodCabinAEnterPoint"
+    }
+  ],
+  "WoodCabinB": [
+    {
+      "exitPoint": "WoodCabinBExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WoodCabinBEnterPoint"
+    }
+  ],
+  "WoodCabinC": [
+    {
+      "exitPoint": "WoodCabinCExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "WoodCabinCEnterPoint"
+    }
+  ]
+}
