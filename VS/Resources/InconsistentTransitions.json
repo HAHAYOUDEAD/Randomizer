@@ -1,0 +1,601 @@
+{
+  "AirfieldRegion": [
+    {
+      "exitPoint": "TrailerEEnterPoint",
+      "toScene": "TrailerE",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerEExitPoint"
+    }
+	
+  ],
+  "BlackrockRegion": [
+	{
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+	{
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    }
+  ],
+  "CanneryRegion": [
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+	{
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+	{
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    }
+  ],
+  "CanyonRoadTransitionZone": [
+    {
+      "exitPoint": "TrailerEEnterPoint",
+      "toScene": "TrailerE",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerEExitPoint"
+    }
+  ],
+  "CoastalHouseA": [
+    {
+      "exitPoint": "CoastalHouseAExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseAEnterPoint"
+    }
+  ],
+  "CoastalHouseD": [
+    {
+      "exitPoint": "CoastalHouseDFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseDFrontEnterPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseDBackEnterPoint"
+    }
+  ],
+  "CoastalHouseF": [
+    {
+      "exitPoint": "CoastalHouseFExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "CoastalHouseFEnterPoint"
+    }
+  ],
+  "CoastalHouseH": [
+    {
+      "exitPoint": "HouseHFrontExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHFrontEnterPoint"
+    },
+    {
+      "exitPoint": "HouseHBackExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseHBackEnterPoint"
+    }
+  ],
+  "CoastalRegion": [
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "TrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinBEnterPoint",
+      "toScene": "LakeCabinB",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinBExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "LakeCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinCEnterPoint",
+      "toScene": "LakeCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinFEnterPoint",
+      "toScene": "LakeCabinF",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinFExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinEEnterPoint",
+      "toScene": "LakeCabinE",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinEExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinDEnterPoint",
+      "toScene": "FishingCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinCEnterPoint",
+      "toScene": "FishingCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "FishingCabinAEnterPoint",
+      "toScene": "FishingCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+    {
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCBasementExitPoint"
+    },
+	{
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHBackExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseAEnterPoint",
+      "toScene": "CoastalHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseAExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDFrontEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDBackExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseFEnterPoint",
+      "toScene": "CoastalHouseF",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseFExitPoint"
+    }
+  ],
+  "FishingCabinA": [
+    {
+      "exitPoint": "LakeCabinAExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinAEnterPoint"
+    }
+  ],
+  "FishingCabinC": [
+    {
+      "exitPoint": "LakeCabinCExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinCEnterPoint"
+    }
+  ],
+  "FishingCabinD": [
+    {
+      "exitPoint": "LakeCabinDExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "FishingCabinDEnterPoint"
+    }
+  ],
+  "HighwayTransitionZone": [
+    {
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseCBasementExitPoint"
+    }
+  ],
+  "HouseBasementC": [
+    {
+      "exitPoint": "CoastalHouseCBasementExitPoint",
+      "toScene": "HighwayTransitionZone",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "HouseBasementCEnterPoint"
+    }
+  ],
+  "LakeCabinA": [
+    {
+      "exitPoint": "LakeCabinAExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinAEnterPoint"
+    }
+  ],
+  "LakeCabinB": [
+    {
+      "exitPoint": "LakeCabinBExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinBEnterPoint"
+    }
+  ],
+  "LakeCabinC": [
+    {
+      "exitPoint": "LakeCabinCExitPoint",
+      "toScene": "CoastalRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinCEnterPoint"
+    }
+  ],
+  "LakeCabinD": [
+    {
+      "exitPoint": "LakeCabinDExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinDEnterPoint"
+    }
+  ],
+  "LakeCabinE": [
+    {
+      "exitPoint": "LakeCabinEExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinEEnterPoint"
+    }
+  ],
+  "LakeCabinF": [
+    {
+      "exitPoint": "LakeCabinFExitPoint",
+      "toScene": "AshCanyonRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "LakeCabinFEnterPoint"
+    }
+  ],
+  "LakeRegion": [
+    {
+      "exitPoint": "TrailerAEnterPoint",
+      "toScene": "TrailerA",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerAExitPoint"
+    },
+    {
+      "exitPoint": "TrailerCEnterPoint",
+      "toScene": "TrailerC",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerCExitPoint"
+    },
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    },
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinEEnterPoint",
+      "toScene": "LakeCabinE",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinEExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinAEnterPoint",
+      "toScene": "LakeCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+	{
+      "exitPoint": "LakeCabinCEnterPoint",
+      "toScene": "LakeCabinC",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinCExitPoint"
+    },
+    {
+      "exitPoint": "LakeCabinFEnterPoint",
+      "toScene": "LakeCabinF",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinFExitPoint"
+    },
+	{
+      "exitPoint": "LakeCabinBEnterPoint",
+      "toScene": "LakeCabinB",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinBExitPoint"
+    },	
+	{
+      "exitPoint": "LakeCabinDEnterPoint",
+      "toScene": "LakeCabinD",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinDExitPoint"
+    }
+  ],
+  "MiningRegion": [
+    {
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDExitPoint"
+    }
+  ],
+  "MiltonHouseA": [
+    {
+      "exitPoint": "MiltonHouseAExitPoint",
+      "toScene": "MountainTownRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "MiltonHouseAEnterPoint"
+    }
+  ],
+  "MountainTownRegion": [
+	{
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+	{
+      "exitPoint": "HouseBasementCEnterPoint",
+      "toScene": "HouseBasementC",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseCBasementExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseAEnterPoint",
+      "toScene": "MiltonHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseAExitPoint"
+    }
+  ],
+  "PrepperCacheA": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheAEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheB": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheBEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheBInterloper": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheC": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheCEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheD": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheDEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheE": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheEEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheF": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "PrepperCacheFEmpty": [
+    {
+      "exitPoint": "HatchRandomSelect_ExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "PrepperCacheEnterPoint"
+    }
+  ],
+  "RuralRegion": [
+    {
+      "exitPoint": "FishingCabinAEnterPoint",
+      "toScene": "FishingCabinA",
+      "type": "ToIndoors",
+      "linkedPoint": "LakeCabinAExitPoint"
+    },
+    {
+      "exitPoint": "HouseHBackEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHBackExitPoint"
+    },
+    {
+      "exitPoint": "HouseHFrontEnterPoint",
+      "toScene": "CoastalHouseH",
+      "type": "ToIndoors",
+      "linkedPoint": "HouseHFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseAEnterPoint",
+      "toScene": "CoastalHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseAExitPoint"
+    },
+	{
+      "exitPoint": "CoastalHouseDFrontEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDFrontExitPoint"
+    },
+    {
+      "exitPoint": "CoastalHouseDBackEnterPoint",
+      "toScene": "CoastalHouseD",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseDBackExitPoint"
+    },
+	{
+      "exitPoint": "CoastalHouseFEnterPoint",
+      "toScene": "CoastalHouseF",
+      "type": "ToIndoors",
+      "linkedPoint": "CoastalHouseFExitPoint"
+    },
+    {
+      "exitPoint": "MiltonHouseAEnterPoint",
+      "toScene": "MiltonHouseA",
+      "type": "ToIndoors",
+      "linkedPoint": "MiltonHouseAExitPoint"
+    }
+  ],
+  "TrailerA": [
+    {
+      "exitPoint": "TrailerAExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerAEnterPoint"
+    }
+  ],
+  "TrailerB": [
+    {
+      "exitPoint": "TrailerBExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerBEnterPoint"
+    }
+  ],
+  "TrailerC": [
+    {
+      "exitPoint": "TrailerCExitPoint",
+      "toScene": "LakeRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerCEnterPoint"
+    }
+  ],
+  "TrailerD": [
+    {
+      "exitPoint": "TrailerDExitPoint",
+      "toScene": "WhalingStationRegion",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerDEnterPoint"
+    }
+  ],
+  "TrailerE": [
+    {
+      "exitPoint": "TrailerEExitPoint",
+      "toScene": "CanyonRoadTransitionZone",
+      "type": "ToOutdoorsFromIndoors",
+      "linkedPoint": "TrailerEEnterPoint"
+    }
+  ],
+  "WhalingStationRegion": [
+    {
+      "exitPoint": "TrailerBEnterPoint",
+      "toScene": "TrailerB",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerBExitPoint"
+    },
+	{
+      "exitPoint": "TrailerDEnterPoint",
+      "toScene": "TrailerD",
+      "type": "ToIndoors",
+      "linkedPoint": "TrailerDEчшеPoint"
+    }
+  ]
+}

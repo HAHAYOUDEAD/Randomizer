@@ -27,12 +27,6 @@
       "linkedPoint": "HubExitPoint"
     },
     {
-      "exitPoint": "TrailerEEnterPoint",
-      "toScene": "TrailerE",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerEExitPoint"
-    },
-    {
       "exitPoint": "TrailerBEnterPoint",
       "toScene": "AirfieldTrailerB",
       "type": "ToIndoors",
@@ -208,7 +202,7 @@
       "exitPoint": "GoldMineExitPoint2",
       "toScene": "AshCanyonRegion",
       "type": "ToOutdoorsFromCave",
-      "linkedPoint": "AshCaveBEnterPoint2"
+      "linkedPoint": "GoldMineEnterPoint2"
     }
   ],
   "AshWoodCabinA": [
@@ -333,12 +327,6 @@
       "linkedPoint": "BlackrockTransitionExitPoint"
     },
     {
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
-    },
-    {
       "exitPoint": "PowerPlantEnterPoint1",
       "toScene": "BlackrockPowerplantA",
       "type": "ToIndoors",
@@ -349,12 +337,6 @@
       "toScene": "BlackrockCaveA",
       "type": "ToCave",
       "linkedPoint": "BlackrockCaveExitPoint2"
-    },
-    {
-      "exitPoint": "TrailerDEnterPoint",
-      "toScene": "TrailerD",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerDExitPoint"
     },
     {
       "exitPoint": "MineEnterPoint",
@@ -491,18 +473,6 @@
   ],
   "CanneryRegion": [
     {
-      "exitPoint": "TrailerDEnterPoint",
-      "toScene": "TrailerD",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerDExitPoint"
-    },
-    {
-      "exitPoint": "TrailerCEnterPoint",
-      "toScene": "TrailerC",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerCExitPoint"
-    },
-    {
       "exitPoint": "WoodCabinCEnterPoint",
       "toScene": "WoodCabinC",
       "type": "ToIndoors",
@@ -513,12 +483,6 @@
       "toScene": "RadioControlHutB",
       "type": "ToIndoors",
       "linkedPoint": "RadioControlHutExitPoint"
-    },
-    {
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
     },
     {
       "exitPoint": "WoodCabinAEnterPoint",
@@ -591,12 +555,6 @@
       "toScene": "RuralRegion",
       "type": "ToOutdoorsFromOutdoors",
       "linkedPoint": "CanyonRoadEnterPoint1"
-    },
-    {
-      "exitPoint": "TrailerEEnterPoint",
-      "toScene": "TrailerE",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerEExitPoint"
     }
   ],
   "CaveB": [
@@ -645,14 +603,6 @@
       "linkedPoint": "ChurchCEnterPoint"
     }
   ],
-  "CoastalHouseA": [
-    {
-      "exitPoint": "CoastalHouseAExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "CoastalHouseAEnterPoint"
-    }
-  ],
   "CoastalHouseB": [
     {
       "exitPoint": "CoastalHouseBBackExitPoint",
@@ -681,48 +631,12 @@
       "linkedPoint": "CoastalHouseCFrontEnterPoint"
     }
   ],
-  "CoastalHouseD": [
-    {
-      "exitPoint": "CoastalHouseDFrontExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "CoastalHouseDFrontEnterPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseDBackExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "CoastalHouseDBackEnterPoint"
-    }
-  ],
   "CoastalHouseE": [
     {
       "exitPoint": "CoastalHouseEExitPoint",
       "toScene": "CoastalRegion",
       "type": "ToOutdoorsFromIndoors",
       "linkedPoint": "CoastalHouseEEnterPoint"
-    }
-  ],
-  "CoastalHouseF": [
-    {
-      "exitPoint": "CoastalHouseFExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "CoastalHouseFEnterPoint"
-    }
-  ],
-  "CoastalHouseH": [
-    {
-      "exitPoint": "HouseHFrontExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "HouseHFrontEnterPoint"
-    },
-    {
-      "exitPoint": "HouseHBackExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "HouseHBackEnterPoint"
     }
   ],
   "CoastalRegion": [
@@ -737,24 +651,6 @@
       "toScene": "MineTransitionZone",
       "type": "ToCave",
       "linkedPoint": "MineExitPoint2"
-    },
-    {
-      "exitPoint": "FishingCabinDEnterPoint",
-      "toScene": "FishingCabinD",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinDExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinBEnterPoint",
-      "toScene": "LakeCabinB",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinBExitPoint"
-    },
-    {
-      "exitPoint": "TrailerAEnterPoint",
-      "toScene": "TrailerA",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerAExitPoint"
     },
     {
       "exitPoint": "CoastalHouseBBackEnterPoint",
@@ -781,46 +677,10 @@
       "linkedPoint": "QuonsetGasStationBackExitPoint"
     },
     {
-      "exitPoint": "CoastalHouseFEnterPoint",
-      "toScene": "CoastalHouseF",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseFExitPoint"
-    },
-    {
-      "exitPoint": "FishingCabinCEnterPoint",
-      "toScene": "FishingCabinC",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinCExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinDEnterPoint",
-      "toScene": "LakeCabinD",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinDExitPoint"
-    },
-    {
       "exitPoint": "CoastalRegionExitPoint",
       "toScene": "RavineTransitionZone",
       "type": "ToOutdoorsFromOutdoors",
       "linkedPoint": "RavineExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinCEnterPoint",
-      "toScene": "LakeCabinC",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinCExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinFEnterPoint",
-      "toScene": "LakeCabinF",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinFExitPoint"
-    },
-    {
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
     },
     {
       "exitPoint": "CoastalHouseCFrontEnterPoint",
@@ -841,100 +701,10 @@
       "linkedPoint": "HighwayTransitionExitPoint"
     },
     {
-      "exitPoint": "LakeCabinDEnterPoint",
-      "toScene": "LakeCabinD",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinDExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseFEnterPoint",
-      "toScene": "CoastalHouseF",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseFExitPoint"
-    },
-    {
-      "exitPoint": "FishingCabinAEnterPoint",
-      "toScene": "FishingCabinA",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinAExitPoint"
-    },
-    {
-      "exitPoint": "TrailerAEnterPoint",
-      "toScene": "TrailerA",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerAExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseAEnterPoint",
-      "toScene": "CoastalHouseA",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseAExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseEEnterPoint",
-      "toScene": "CoastalHouseE",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseEExitPoint"
-    },
-    {
-      "exitPoint": "FishingCabinDEnterPoint",
-      "toScene": "FishingCabinD",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinDExitPoint"
-    },
-    {
-      "exitPoint": "TrailerCEnterPoint",
-      "toScene": "TrailerC",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerCExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseDFrontEnterPoint",
-      "toScene": "CoastalHouseD",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseDFrontExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseDBackEnterPoint",
-      "toScene": "CoastalHouseD",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseDBackExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinEEnterPoint",
-      "toScene": "LakeCabinE",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinEExitPoint"
-    },
-    {
       "exitPoint": "CoastalExitPoint",
       "toScene": "MineTransitionZone",
       "type": "ToCave",
       "linkedPoint": "MineExitPoint"
-    },
-    {
-      "exitPoint": "TrailerCEnterPoint",
-      "toScene": "TrailerC",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerCExitPoint"
-    },
-	{
-      "exitPoint": "HouseBasementCEnterPoint",
-      "toScene": "HouseBasementC",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseCBasementExitPoint"
-    },
-	{
-      "exitPoint": "HouseHBackEnterPoint",
-      "toScene": "CoastalHouseH",
-      "type": "ToIndoors",
-      "linkedPoint": "HouseHBackExitPoint"
-    },
-    {
-      "exitPoint": "HouseHFrontEnterPoint",
-      "toScene": "CoastalHouseH",
-      "type": "ToIndoors",
-      "linkedPoint": "HouseHFrontExitPoint"
     }
   ],
   "CommunityHallA": [
@@ -1127,30 +897,6 @@
       "linkedPoint": "FarmHouseBEnterPoint"
     }
   ],
-  "FishingCabinA": [
-    {
-      "exitPoint": "LakeCabinAExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "FishingCabinAEnterPoint"
-    }
-  ],
-  "FishingCabinC": [
-    {
-      "exitPoint": "LakeCabinCExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "FishingCabinCEnterPoint"
-    }
-  ],
-  "FishingCabinD": [
-    {
-      "exitPoint": "LakeCabinDExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "FishingCabinDEnterPoint"
-    }
-  ],
   "GreyMothersHouseA": [
     {
       "exitPoint": "GreyMotherHouseAExitPoint",
@@ -1181,24 +927,10 @@
       "linkedPoint": "HighwayMineExitPoint"
     },
     {
-      "exitPoint": "HouseBasementCEnterPoint",
-      "toScene": "HouseBasementC",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseCBasementExitPoint"
-    },
-    {
       "exitPoint": "HighwayTransitionExitPoint",
       "toScene": "CoastalRegion",
       "type": "ToOutdoorsFromOutdoors",
       "linkedPoint": "CoastalRegionExitPoint"
-    }
-  ],
-  "HouseBasementC": [
-    {
-      "exitPoint": "CoastalHouseCBasementExitPoint",
-      "toScene": "HighwayTransitionZone",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "HouseBasementCEnterPoint"
     }
   ],
   "HouseBasementPV": [
@@ -1309,54 +1041,6 @@
       "linkedPoint": "RiverValleyCaveBEnterPoint1"
     }
   ],
-  "LakeCabinA": [
-    {
-      "exitPoint": "LakeCabinAExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinAEnterPoint"
-    }
-  ],
-  "LakeCabinB": [
-    {
-      "exitPoint": "LakeCabinBExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinBEnterPoint"
-    }
-  ],
-  "LakeCabinC": [
-    {
-      "exitPoint": "LakeCabinCExitPoint",
-      "toScene": "CoastalRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinCEnterPoint"
-    }
-  ],
-  "LakeCabinD": [
-    {
-      "exitPoint": "LakeCabinDExitPoint",
-      "toScene": "AshCanyonRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinDEnterPoint"
-    }
-  ],
-  "LakeCabinE": [
-    {
-      "exitPoint": "LakeCabinEExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinEEnterPoint"
-    }
-  ],
-  "LakeCabinF": [
-    {
-      "exitPoint": "LakeCabinFExitPoint",
-      "toScene": "AshCanyonRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "LakeCabinFEnterPoint"
-    }
-  ],
   "LakeRegion": [
     {
       "exitPoint": "CabinEnterPoint",
@@ -1371,40 +1055,10 @@
       "linkedPoint": "RavineExitPoint"
     },
     {
-      "exitPoint": "TrailerAEnterPoint",
-      "toScene": "TrailerA",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerAExitPoint"
-    },
-    {
-      "exitPoint": "TrailerCEnterPoint",
-      "toScene": "TrailerC",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerCExitPoint"
-    },
-    {
-      "exitPoint": "TrailerDEnterPoint",
-      "toScene": "TrailerD",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerDExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinEEnterPoint",
-      "toScene": "LakeCabinE",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinEExitPoint"
-    },
-    {
       "exitPoint": "MountainTownCaveBEnterPoint2",
       "toScene": "MountainTownCaveB",
       "type": "ToCave",
       "linkedPoint": "MountainTownCaveBExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinAEnterPoint",
-      "toScene": "LakeCabinA",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinAExitPoint"
     },
     {
       "exitPoint": "LakeRegionExitPoint",
@@ -1435,36 +1089,6 @@
       "toScene": "DamTrailerB",
       "type": "ToIndoors",
       "linkedPoint": "TrailerBExitPoint"
-    },
-    {
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinCEnterPoint",
-      "toScene": "LakeCabinC",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinCExitPoint"
-    },
-    {
-      "exitPoint": "LakeCabinFEnterPoint",
-      "toScene": "LakeCabinF",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinFExitPoint"
-    },
-	{
-      "exitPoint": "LakeCabinBEnterPoint",
-      "toScene": "LakeCabinB",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinBExitPoint"
-    },	
-	{
-      "exitPoint": "LakeCabinDEnterPoint",
-      "toScene": "LakeCabinD",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinDExitPoint"
     }
   ],
   "LighthouseA": [
@@ -1585,14 +1209,6 @@
       "toScene": "TracksRegion",
       "type": "ToOutdoorsFromOutdoors",
       "linkedPoint": "TracksExitPoint"
-    }
-  ],
-  "MiltonHouseA": [
-    {
-      "exitPoint": "MiltonHouseAExitPoint",
-      "toScene": "MountainTownRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "MiltonHouseAEnterPoint"
     }
   ],
   "MiltonHouseC": [
@@ -1783,15 +1399,21 @@
       "toScene": "RuralRegion",
       "type": "ToOutdoorsFromCave",
       "linkedPoint": "RuralExitPoint"
+    },
+	{
+      "exitPoint": "ElevatorExitPoint1",
+      "toScene": "MineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "ElevatorExitPoint2"
+    },
+    {
+      "exitPoint": "ElevatorExitPoint2",
+      "toScene": "MineTransitionZone",
+      "type": "ToCave",
+      "linkedPoint": "ElevatorExitPoint1"
     }
   ],
   "MiningRegion": [
-    {
-      "exitPoint": "TrailerDEnterPoint",
-      "toScene": "TrailerD",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerDExitPoint"
-    },
     {
       "exitPoint": "ConcentratorUpperEnterPoint",
       "toScene": "MineConcentratorBuilding",
@@ -2085,12 +1707,6 @@
       "toScene": "MountainPassCaveA",
       "type": "ToCave",
       "linkedPoint": "ValleyCaveExitPointB"
-    },
-	{
-      "exitPoint": "EnterPoint",
-      "toScene": "BunkerA",
-      "type": "ToBunker",
-      "linkedPoint": "BunkerAExitPoint"
     }
   ],
   "MountainTownCaveA": [
@@ -2249,12 +1865,6 @@
       "linkedPoint": "MiltonHouseCFrontExitPoint"
     },
     {
-      "exitPoint": "MiltonHouseAEnterPoint",
-      "toScene": "MiltonHouseA",
-      "type": "ToIndoors",
-      "linkedPoint": "MiltonHouseAExitPoint"
-    },
-    {
       "exitPoint": "HouseHBackEnterPoint",
       "toScene": "MiltonHouseH2",
       "type": "ToIndoors",
@@ -2283,18 +1893,6 @@
       "toScene": "MiltonHouseH1",
       "type": "ToIndoors",
       "linkedPoint": "HouseH1FrontExitPoint"
-    },
-	{
-      "exitPoint": "HouseBasementCEnterPoint",
-      "toScene": "HouseBasementC",
-      "type": "ToIndoors",
-      "linkedPoint": "MiltonHouseCBasementExitPoint"
-    },
-	{
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
     }
   ],
   "PostOfficeA": [
@@ -2305,116 +1903,12 @@
       "linkedPoint": "PostOfficeAEnterPoint"
     }
   ],
-  "PrepperCacheA": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheAEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheB": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheBEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheBInterloper": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheC": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheCEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheD": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheDEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheE": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheEEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
   "PrepperCacheEmpty": [
     {
       "exitPoint": "PrepperCacheEmptyExitPoint",
       "toScene": "RuralRegion",
       "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheF": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
-    }
-  ],
-  "PrepperCacheFEmpty": [
-    {
-      "exitPoint": "HatchRandomSelect_ExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "PrepperCacheEnterPoint"
+      "linkedPoint": "PrepperCacheEmptyEnterPoint"
     }
   ],
   "PumpHouse": [
@@ -2611,12 +2105,6 @@
       "linkedPoint": "BarnHouseAFrontExitPoint"
     },
     {
-      "exitPoint": "MiltonHouseAEnterPoint",
-      "toScene": "MiltonHouseA",
-      "type": "ToIndoors",
-      "linkedPoint": "MiltonHouseAExitPoint"
-    },
-    {
       "exitPoint": "CrashMountainEnterPoint",
       "toScene": "CrashMountainRegion",
       "type": "ToOutdoorsFromOutdoors",
@@ -2633,12 +2121,6 @@
       "toScene": "HouseBasementPV",
       "type": "ToIndoors",
       "linkedPoint": "HouseBasementPVExitPoint"
-    },
-    {
-      "exitPoint": "FishingCabinAEnterPoint",
-      "toScene": "FishingCabinA",
-      "type": "ToIndoors",
-      "linkedPoint": "LakeCabinAExitPoint"
     },
     {
       "exitPoint": "CaveBEnterPoint",
@@ -2665,18 +2147,6 @@
       "linkedPoint": "RuralStoreAFrontExitPoint"
     },
     {
-      "exitPoint": "HouseHBackEnterPoint",
-      "toScene": "CoastalHouseH",
-      "type": "ToIndoors",
-      "linkedPoint": "HouseHBackExitPoint"
-    },
-    {
-      "exitPoint": "HouseHFrontEnterPoint",
-      "toScene": "CoastalHouseH",
-      "type": "ToIndoors",
-      "linkedPoint": "HouseHFrontExitPoint"
-    },
-    {
       "exitPoint": "BarnHouseBFrontEnterPoint",
       "toScene": "BarnHouseB",
       "type": "ToIndoors",
@@ -2687,12 +2157,6 @@
       "toScene": "MineTransitionZone",
       "type": "ToCave",
       "linkedPoint": "MineExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseAEnterPoint",
-      "toScene": "CoastalHouseA",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseAExitPoint"
     },
     {
       "exitPoint": "PrepperCacheEmptyEnterPoint",
@@ -2712,29 +2176,11 @@
       "type": "ToIndoors",
       "linkedPoint": "CommunityHallAFrontExitPoint"
     },
-	{
-      "exitPoint": "CoastalHouseFEnterPoint",
-      "toScene": "CoastalHouseF",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseFExitPoint"
-    },
     {
       "exitPoint": "EnterPoint",
       "toScene": "BunkerB",
       "type": "ToBunker",
       "linkedPoint": "BunkerBExitPoint"
-    },
-	{
-      "exitPoint": "CoastalHouseDFrontEnterPoint",
-      "toScene": "CoastalHouseD",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseDFrontExitPoint"
-    },
-    {
-      "exitPoint": "CoastalHouseDBackEnterPoint",
-      "toScene": "CoastalHouseD",
-      "type": "ToIndoors",
-      "linkedPoint": "CoastalHouseDBackExitPoint"
     }
   ],
   "RuralStoreA": [
@@ -2803,46 +2249,6 @@
       "linkedPoint": "DLCExitPoint"
     }
   ],
-  "TrailerA": [
-    {
-      "exitPoint": "TrailerAExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "TrailerAEnterPoint"
-    }
-  ],
-  "TrailerB": [
-    {
-      "exitPoint": "TrailerBExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "TrailerBEnterPoint"
-    }
-  ],
-  "TrailerC": [
-    {
-      "exitPoint": "TrailerCExitPoint",
-      "toScene": "LakeRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "TrailerCEnterPoint"
-    }
-  ],
-  "TrailerD": [
-    {
-      "exitPoint": "TrailerDExitPoint",
-      "toScene": "WhalingStationRegion",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "TrailerDEnterPoint"
-    }
-  ],
-  "TrailerE": [
-    {
-      "exitPoint": "TrailerEExitPoint",
-      "toScene": "CanyonRoadTransitionZone",
-      "type": "ToOutdoorsFromIndoors",
-      "linkedPoint": "TrailerEEnterPoint"
-    }
-  ],
   "TrailerSShape": [
     {
       "exitPoint": "TrailerSExitPoint1",
@@ -2892,12 +2298,6 @@
     }
   ],
   "WhalingStationRegion": [
-    {
-      "exitPoint": "TrailerBEnterPoint",
-      "toScene": "TrailerB",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerBExitPoint"
-    },
     {
       "exitPoint": "TrailerSEnterPoint3",
       "toScene": "TrailerSShape",
@@ -2951,12 +2351,6 @@
       "toScene": "LighthouseA",
       "type": "ToIndoors",
       "linkedPoint": "LighthouseBottomExitPoint"
-    },
-    {
-      "exitPoint": "TrailerDEnterPoint",
-      "toScene": "TrailerD",
-      "type": "ToIndoors",
-      "linkedPoint": "TrailerDEчшеPoint"
     },
     {
       "exitPoint": "WhalingExitPoint",

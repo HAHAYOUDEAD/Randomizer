@@ -1,7 +1,10 @@
 ﻿global using static Randomizer.Utility;
+using Harmony;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json.Serialization;
+using static UnityEngine.UI.Image;
 using static UnityEngine.UI.Selectable;
 using Random = System.Random;
 
@@ -22,24 +25,23 @@ namespace Randomizer
     {
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public TransitionType type;
-        public string? exitPoint;
-        public string? toScene;
-        public string? linkedPoint;
+        public string fromScene;
+        public string exitPoint;
+        public string toScene;
+        public string linkedPoint;
         public bool unique = true;
     }
-
-
 
     public class Main : MelonMod
     {
         public bool isLoaded = false;
 
-        public int theSeed = 42;
-        
         public static string modsPath;
 
+        private static int chanceRollSameTransitionType = 12;
+
         public static Dictionary<string, TransitionDefinition[]> transitions = new();
-        public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> rolledPairs = new();
+        public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> rolledPairs = new(); // origonal scene, <transition info > replacer transition info>
 
         public override void OnInitializeMelon()
         {
@@ -49,32 +51,14 @@ namespace Randomizer
 
             transitions = JsonSerializer.Deserialize<Dictionary<string, TransitionDefinition[]>>(LoadEmbeddedJSON("Transitions.json"), GetDefaultJsonOptions()) ?? new();
 
-            //rolledPairs = RollPairs(theSeed);
+            rolledPairs = RollPairs(Settings.options.seed);
 
-            RunTransitionDictionaryIntegrityCheck();
+            //RunTransitionDictionaryIntegrityCheck();
         }
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
-            if (IsScenePlayable(sceneName) && rolledPairs.TryGetValue(sceneName, out var kvp))
-            {
-                foreach (var comp in UnityEngine.Object.FindObjectsOfType<LoadScene>())
-                {
-                    // check guid, and if already replaced - reroll and add to dict with guid
 
-
-                    // preselect some inconsistent buildings to be always present, defined by the seed. This is for stuff like prepper caches and non-unique houses/basements
-
-
-                    if (kvp.TryGetValue(new TransitionDefinition { toScene = comp.m_SceneToLoad, exitPoint = comp.m_ExitPointName }, out var newTransition))
-                    {
-                        Log(System.ConsoleColor.Blue, $"Replaced transition {comp.m_SceneToLoad} in scene {sceneName} to {newTransition.toScene}");
-                        comp.m_SceneToLoad = newTransition.toScene;
-                        comp.m_ExitPointName = newTransition.exitPoint;
-                        
-                    }
-                }
-            }
         }
 
         public static void RunTransitionDictionaryIntegrityCheck()
@@ -82,6 +66,8 @@ namespace Randomizer
             Dictionary<string, int> countExit = new();
             Dictionary<string, int> shortCountLink = new();
             Dictionary<string, int> countLink = new();
+            Dictionary<string, string> pairs = new();
+            Dictionary<string, int> linkScene = new();
             foreach (var scene in transitions)
             {
                 foreach (var transition in scene.Value)
@@ -91,11 +77,24 @@ namespace Randomizer
                         Log(System.ConsoleColor.Red, $"Transition in scene {scene.Key} is missing an EXIT point");
                         continue;
                     }
-                    if (string.IsNullOrEmpty(transition.linkedPoint))
+                    else if (string.IsNullOrEmpty(transition.linkedPoint))
                     {
-                        Log(System.ConsoleColor.Red, $"Transition in scene {scene.Key} is missing a LINKED point");
+                        Log(System.ConsoleColor.Red, $"Transition to {transition.exitPoint} in scene {scene.Key} is missing a LINKED point");
                         continue;
                     }
+                    if (!pairs.ContainsKey(transition.exitPoint))
+                    { 
+                        pairs[transition.exitPoint] = transition.linkedPoint;
+                    }
+                    if (!linkScene.ContainsKey(transition.exitPoint + "|" + transition.toScene))
+                    {
+                        linkScene[transition.exitPoint + "|" + transition.toScene] = 1;
+                    }
+                    else
+                    {
+                        linkScene[transition.exitPoint + "|" + transition.toScene]++;
+                    }
+
                     if (!countExit.ContainsKey(transition.exitPoint))
                     {
                         countExit[transition.exitPoint] = 1;
@@ -135,32 +134,192 @@ namespace Randomizer
                 shortCountLink.Clear();
 
             }
-
+            var sortedDict = new SortedDictionary<string, int>(linkScene);
+            
+            foreach (var kvp in sortedDict)
+            {
+                if (kvp.Value > 1)
+                {
+                    Log(System.ConsoleColor.Yellow, $"Point {kvp.Key.Split("|")[0]} leading to scene {kvp.Key.Split("|")[1]} is linked to multiple exit points");
+                }
+            }
             int count = 0;
             foreach (var kvp in countExit)
             {
+
                 count++;
                 if (countLink.TryGetValue(kvp.Key, out var _))
-                { 
-                    if (kvp.Value != countLink[kvp.Key])
+                {
+                    if (pairs.TryGetValue(kvp.Key, out string link))
                     {
-                        Log(System.ConsoleColor.Red, $"Exit point {kvp.Key} has missmatched links, there are {kvp.Value} exits vs {countLink[kvp.Key]} links");
+                        if (((kvp.Value + countLink[kvp.Key]) + (countExit[link] + countLink[link])) % 2 != 0)
+                        {
+                            Log(System.ConsoleColor.Blue, $"Uneven pairs for {kvp.Key}");
+                        }
                     }
+                    else
+                    {
+                        Log(System.ConsoleColor.Magenta, $"Exit point {kvp.Key} is missing a link pair");
+                    }
+
                     if (kvp.Value > 1)
                     {
-                        Log(System.ConsoleColor.Yellow, $"Exit point {kvp.Key} is not unique");
+                        //Log(System.ConsoleColor.Yellow, $"Exit point {kvp.Key} is not unique");
                     }
                 }
                 else
                 {
-                    Log(System.ConsoleColor.Red, $"Exit point {kvp.Key} is missing a corresponding linked point");
+                    Log(System.ConsoleColor.Red, $"Exit point {kvp.Key} is not linked to anywhere");
                 }
 
 
             }
+
             Log(System.ConsoleColor.Gray, $"Check complete for {count} transitions");
             Log(System.ConsoleColor.Gray);
         }
+
+        public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> RollPairs(int seed)
+        {
+            // flatten dict and create new one sorted by transition type for easier pairing logic
+            List<TransitionDefinition> allTransitions = new();
+
+            foreach (var scenes in transitions)
+            {
+                foreach (var transition in scenes.Value)
+                {
+                    transition.fromScene = scenes.Key; // add original scene info to transition definition for later reference
+                    allTransitions.Add(transition);
+                }
+            }
+
+            // one-way pair transitions to their linked counterparts (exits to enters)
+            List<(TransitionDefinition In, TransitionDefinition Out)> pairs = [];
+            Dictionary<TransitionType, List<(TransitionDefinition In, TransitionDefinition Out)>> pairsByType = new();
+
+            foreach (var transition in allTransitions)
+            {
+                // Skip if we already added this pair
+                if (pairs.Any(p => p.In == transition)) continue;
+
+                var counterpart = allTransitions.FirstOrDefault(link =>
+                    link.exitPoint == transition.linkedPoint &&
+                    link.toScene == transition.fromScene);
+
+                if (counterpart != null)
+                {
+                    pairs.Add((transition, counterpart));
+                }
+                else
+                {
+                    pairs.Add((transition, transition));
+                    Log(System.ConsoleColor.Red, $"No pair found for {transition.exitPoint} in scene {transition.fromScene}");
+                }
+
+                if (Settings.options.shuffleMode != 0) // only make by type dict when needed
+                {
+                    pairsByType.TryAdd(transition.type, new());
+                    pairsByType[transition.type].Add((transition, counterpart ?? transition));
+                }
+            }
+
+            // pair transition pairs to randomized pairs
+            var pairedPairs = new Dictionary<(TransitionDefinition AIn, TransitionDefinition AOut), (TransitionDefinition BIn, TransitionDefinition BOut)>();
+            var rnd = new Random(seed);
+
+            if (Settings.options.shuffleMode == 0) // no logic, just shuffle everything
+            {
+                var pairsClone = new List<(TransitionDefinition InClone, TransitionDefinition OutClone)>(pairs);
+
+                foreach (var pair in pairs)
+                {
+                    int index = rnd.Next(pairsClone.Count);
+                    var randomPair = pairsClone[index];
+                    pairsClone.RemoveAt(index);
+
+                    pairedPairs[pair] = randomPair;
+                }
+            }
+            else if (Settings.options.shuffleMode == 1) // reasonable, shuffle within types
+            {
+                Dictionary<TransitionType, TransitionType> validMatches = new()
+                {
+                    { TransitionType.ToIndoors, TransitionType.ToOutdoorsFromIndoors },
+                    { TransitionType.ToCave, TransitionType.ToOutdoorsFromCave },
+                    { TransitionType.ToOutdoorsFromIndoors, TransitionType.ToIndoors },
+                    { TransitionType.ToOutdoorsFromOutdoors, TransitionType.ToOutdoorsFromOutdoors },
+                    { TransitionType.ToOutdoorsFromCave, TransitionType.ToCave },
+                    { TransitionType.ToOutdoorsFromBunker, TransitionType.ToBunker },
+                    { TransitionType.ToBunker, TransitionType.ToOutdoorsFromBunker }
+                };
+                
+                foreach (var pair in pairs)
+                {
+                    var validTransitions = pairsByType[validMatches[pair.Out.type]];
+                    bool canUseSameType = pair.Out.type == TransitionType.ToIndoors || pair.Out.type == TransitionType.ToCave;
+
+                    if (canUseSameType && (validTransitions.Count == 0 || UnityEngine.Random.Range(0, 100) < chanceRollSameTransitionType))
+                    {
+                        pairsByType.TryGetValue(pair.Out.type, out var fallback);
+                        if (fallback?.Count > 0)
+                        {
+                            validTransitions = fallback;
+                            Log(CC.Yellow, $"Choosing same type transition for {pair.Out.type} when pairing {pair.Out.linkedPoint} in scene {pair.Out.fromScene}");
+                        }
+                    }
+
+                    if (validTransitions.Count == 0)
+                    {
+                        Log(CC.Red, $"No valid transitions available for pairing {pair.Out.linkedPoint} in scene {pair.Out.fromScene}, skipping linking");
+                        continue;
+                    }
+
+                    int index = rnd.Next(validTransitions.Count);
+                    var picked = validTransitions[index];
+
+                    validTransitions.RemoveAt(index); // remove from available pool to prevent reuse
+
+                    pairedPairs[pair] = picked;
+                }
+            }
+
+            // swap A and B points to get final transition replacement map
+            Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> result = new();
+
+            foreach (var pairOfPairs in pairedPairs)
+            {
+                var A = pairOfPairs.Key;
+                var B = pairOfPairs.Value;
+
+                // A's In remapped to B's Out
+                result.TryAdd(A.AIn.fromScene, new());
+                if (!result[A.AIn.fromScene].ContainsKey(A.AIn))
+                {
+                    result[A.AIn.fromScene][A.AIn] = B.BIn;
+                }
+
+
+                // B's In remapped to A's Out
+                result.TryAdd(B.BOut.fromScene, new());
+                if (!result[B.BOut.fromScene].ContainsKey(B.BOut))
+                {
+                    result[B.BOut.fromScene][B.BOut] = A.AOut;
+                }
+
+                Log(System.ConsoleColor.Green, $"Linking  {A.AIn.linkedPoint} in {A.AIn.fromScene} with {B.BIn.exitPoint} in {B.BIn.toScene}");
+                Log(System.ConsoleColor.Gray, $"Mirroring  {A.AOut.exitPoint} in {A.AOut.toScene} to {B.BOut.linkedPoint} in {B.BOut.fromScene}");
+            }
+            int total = result.Sum(r => r.Value.Count);
+
+            Log(CC.Red, $"{total} pairs vs {allTransitions.Count}");
+            Log();
+
+            return result;
+
+           
+        }
+
+        /*
 
         public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> RollPairs(int seed)
         {
@@ -195,6 +354,7 @@ namespace Randomizer
 
             // Deterministic shuffle
             var rng = new Random(seed);
+
             for (int i = allTransitions.Count - 1; i > 0; i--)
             {
                 int j = rng.Next(i + 1);
@@ -203,28 +363,71 @@ namespace Randomizer
                 allTransitions[j] = temp;
             }
 
+            
+            // graym > caveb
+            //
+            // pair elements into dictionary
+            var pairsPerRegion = new Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>>();
 
-
-            // pair elements into dictionary (jfc my head)
-            var dict = new Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>>();
             for (int i = 0; i < allTransitions.Count - 1; i += 2)
             {
-                TransitionDefinition popo = allTransitions[i].transition;
-                popo.type = TransitionType.Irrelevant;
-                TransitionDefinition pepe = allTransitions[i + 1].transition;
-                pepe.type = TransitionType.Irrelevant;
+                var v = allTransitions[i]; // vanilla transition identifier   milton graym tuple
+                var m = allTransitions[i + 1]; // modded transition identifier   rural caveb tuple
 
-                if (!dict.ContainsKey(allTransitions[i].originalScene))
-                {
-                    dict[allTransitions[i].originalScene] = new();
-                }
-                dict[allTransitions[i].originalScene][popo] = pepe;
+                // A scene
+                TransitionDefinition originV = v.transition;// into graym
+                TransitionDefinition originM = m.transition;// into caveb
 
-                if (!dict.ContainsKey(allTransitions[i + 1].originalScene))
+                // B scene
+                TransitionDefinition destinationV = new TransitionDefinition() { // out of caveb to rural
+                    toScene = m.originalScene, 
+                    exitPoint = m.transition.linkedPoint, 
+                    linkedPoint = m.transition.exitPoint };
+                TransitionDefinition destinationM = new TransitionDefinition() { // out of graym to milton
+                    toScene = v.originalScene, 
+                    exitPoint = v.transition.linkedPoint, 
+                    linkedPoint = v.transition.exitPoint };
+
+                // scenes that were the original destinations of A and B
+                TransitionDefinition originPantomV = destinationM; // out of graym to milton
+                TransitionDefinition destinationPhantomV = originM; // into caveb
+
+                // mod destination in A scene
+                pairsPerRegion.TryAdd(v.originalScene, new()); // milton
+                if (pairsPerRegion[v.originalScene].ContainsKey(originV))
                 {
-                    dict[allTransitions[i + 1].originalScene] = new();
+                    Log(CC.Red,$"Duplicate key detected: {originV.exitPoint} in {v.originalScene}" );
                 }
-                dict[allTransitions[i + 1].originalScene][pepe] = popo;
+                pairsPerRegion[v.originalScene][originV] = originM; // into graym > into caveb
+                //Log(System.ConsoleColor.White, $"____{v.originalScene}____");
+                //Log(System.ConsoleColor.DarkMagenta, $"┌--{originV.toScene}: {originV.exitPoint}");
+                //Log(System.ConsoleColor.Magenta, $"└▷ {originM.toScene}: {originM.exitPoint}");
+
+                // mod destination in B scene
+                pairsPerRegion.TryAdd(m.transition.toScene, new()); // caveb
+                if (pairsPerRegion[m.transition.toScene].ContainsKey(destinationV))
+                {
+                    Log(CC.Red, $"Duplicate key detected: {destinationV.exitPoint} in {m.transition.toScene}");
+                }
+                pairsPerRegion[m.transition.toScene][destinationV] = destinationM; // out of caveb to rural > out of graym to milton
+                //Log(System.ConsoleColor.White, $"____{m.transition.toScene}____");
+                //Log(System.ConsoleColor.DarkMagenta, $"┌--{destinationV.toScene}: {destinationV.exitPoint}");
+                //Log(System.ConsoleColor.Magenta, $"└▷ {destinationM.toScene}: {destinationM.exitPoint}");
+
+                // mod destination in scene that A led to iriginally
+                //pairsPerRegion.TryAdd(v.transition.toScene, new()); // graym
+                //pairsPerRegion[v.transition.toScene][originPantomV] = destinationV; // out of graym to milton > out of caveb to rural
+                //Log(System.ConsoleColor.White, $"____{v.transition.toScene}____");
+                //Log(System.ConsoleColor.DarkMagenta, $"┌--{originPantomV.toScene}: {originPantomV.exitPoint}");
+                //Log(System.ConsoleColor.Magenta, $"└▷ {destinationV.toScene}: {destinationV.exitPoint}");
+
+                // mod destination in scene that B led to originally
+                //pairsPerRegion.TryAdd(m.originalScene, new()); // rural
+                //pairsPerRegion[m.originalScene][destinationPhantomV] = originV; // into caveb > into graym
+                //Log(System.ConsoleColor.White, $"____{m.originalScene}____");
+                //Log(System.ConsoleColor.DarkMagenta, $"┌--{destinationPhantomV.toScene}: {destinationPhantomV.exitPoint}");
+                //Log(System.ConsoleColor.Magenta, $"└▷ {originV.toScene}: {originV.exitPoint}");
+                //Log();
             }
 
             // Optional: if odd number of elements, last one points to itself
@@ -232,9 +435,18 @@ namespace Randomizer
             {
                 //dict[allTransitions.Last()] = allTransitions.Last();
             }
+            int total = pairsPerRegion.Sum(r => r.Value.Count);
+            Log(CC.Red,$"{total} pairs vs {allTransitions.Count}");
+            Log();
 
-            return dict;
+            return pairsPerRegion;
         }
+
+        
+        */
+
+
+
 
         public static void Dump() // to use directly in UE
         {
