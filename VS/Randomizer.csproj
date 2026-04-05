@@ -34,18 +34,21 @@
         <ModsPath>$(TheLongDarkPath)/Mods</ModsPath>
         <AssemblySearchPaths>$(AssemblySearchPaths);$(MelonLoaderPath);$(ManagedPath);$(Il2CppPath);$(ModsPath);</AssemblySearchPaths>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 
     <!--This tells the compiler to not include referenced assemblies in the output folder.-->
     <ItemDefinitionGroup>
         <Reference>
-            <Private>False</Private>
-            <SpecificVersion>False</SpecificVersion>
+            <Private>false</Private>
+            <SpecificVersion>false</SpecificVersion>
         </Reference>
     </ItemDefinitionGroup>
     <ItemGroup>
+      <None Remove="Resources\InconsistentTransitions.json" />
       <None Remove="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>
+      <EmbeddedResource Include="Resources\InconsistentTransitions.json" />
       <EmbeddedResource Include="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>

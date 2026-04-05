@@ -23,7 +23,7 @@ namespace Randomizer
         public int seed = 42;
 
         [Name("Hide transition labels")]
-        [Description("For additional confusion\n\nDefault: True")]
+        [Description("For additional confusion\n\nDefault: true")]
         public bool hideTransitionLabels = true;
 
         [Name("Shuffle mode")]
@@ -41,23 +41,27 @@ namespace Randomizer
 
         })]
         public int shuffleMode = 1;
+
+        [Name("Enable debug")]
+        [Description("")]
+        public bool debug = true;
         /*
         [Name("Dementia mode")]
-        [Description("Links between locations are severed, you will not return to your cozy house until you accidentally stumble on it again\n\nGoes well with randomized weather/time/afflictions\n\nDefault: False")]
+        [Description("Links between locations are severed, you will not return to your cozy house until you accidentally stumble on it again\n\nGoes well with randomized weather/time/afflictions\n\nDefault: false")]
         public bool rerollAfterTransition = false;
 
         // how often to reroll after transition
 
         [Name("Randomize weather")]
-        [Description("Set random weather on transition\n\nDefault: False")]
+        [Description("Set random weather on transition\n\nDefault: false")]
         public bool randomizeWeather = false;
 
         [Name("Randomize time of day")]
-        [Description("Set random time of day on transition\n\nDefault: False")]
+        [Description("Set random time of day on transition\n\nDefault: false")]
         public bool randomizeTime = false;
 
         [Name("Random affliction")]
-        [Description("Get random affliction on transition\n\nDefault: False")]
+        [Description("Get random affliction on transition\n\nDefault: false")]
         public bool randoimizeAffliction = false;
 
         [Name("RNG cruelty")]
@@ -96,7 +100,7 @@ namespace Randomizer
         protected override void OnConfirm()
         {
             base.OnConfirm();
-            Main.rolledPairs = Main.RollPairs(Settings.options.seed);
+            rolledPairs = Main.RollPairs(Settings.options.seed);
         }
     }
 }

@@ -595,7 +595,7 @@
       "exitPoint": "TrailerDEnterPoint",
       "toScene": "TrailerD",
       "type": "ToIndoors",
-      "linkedPoint": "TrailerDEчшеPoint"
+      "linkedPoint": "TrailerDExitPoint"
     }
   ]
 }

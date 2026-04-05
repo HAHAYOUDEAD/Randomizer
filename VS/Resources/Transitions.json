@@ -105,7 +105,7 @@
     {
       "exitPoint": "GoldMineEnterPoint1",
       "toScene": "AshMine",
-      "type": "ToIndoors",
+      "type": "ToCave",
       "linkedPoint": "GoldMineExitPoint1"
     },
     {

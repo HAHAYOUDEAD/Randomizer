@@ -18,9 +18,14 @@ namespace Randomizer
         {
             // get all GEAR from main scene (MC) and move under sandbox root
             // scale sandbox root, normal root and dlc root
+            // scale Design root (gear)
+            // scale Design_Placeable root (decorations)
+            // check where dropped items end up
 
             // check if spawnpoint is also mirrored
             // maybe rotate exterior as well
+
+            // mirror back objects with text on them (posters) mostly
         }
 
         private static void UnfamiliarizeCommon()

@@ -8,6 +8,7 @@ global using System.Collections;
 global using System.Collections.Generic;
 global using Il2Cpp;
 global using System.Text.Json;
+global using static Randomizer.Data;
 using Il2CppTLD.Serialization;
 using System.Text.Json.Serialization;
 
@@ -18,6 +19,8 @@ namespace Randomizer
         public const string modVersion = "0.2.0";
         public const string modName = "Randomizer";
         public const string modAuthor = "Waltz";
+
+        public static string modsPath;
 
         public const string resourcesFolder = "Randomizer.Resources."; // root is project name
 
@@ -38,7 +41,7 @@ namespace Randomizer
 
         public static void Log(CC color = CC.White, string message = "🌚")
         {
-            MelonLogger.Msg(color, message);
+            if (Settings.options.debug) MelonLogger.Msg(color, message);
         }
 
         public static string? LoadEmbeddedJSON(string name)
