@@ -27,7 +27,7 @@ namespace Randomizer
         public const string mainFolder = "Randomizer";
         public const string addressableRefHack = "RANDOMIZER";
 
-        public static Texture2D survivorSettingsTexture = new(1, 1);
+        
 
 
         public static bool IsScenePlayable()

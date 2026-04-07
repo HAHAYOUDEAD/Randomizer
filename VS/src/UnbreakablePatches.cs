@@ -171,7 +171,10 @@ namespace Randomizer
 
                     if (item.m_FeatureTexture.m_AssetGUID == addressableRefHack) 
                     {
-                        item.m_TextureHandle = Addressables.ResourceManager.CreateCompletedOperation(survivorSettingsTexture, null); // fake handle bacuse I can't be arsed with addressables for a single texture
+                        if (item.m_TextureHandle.Result == null)
+                        {
+                            item.m_TextureHandle = Addressables.ResourceManager.CreateCompletedOperation(Main.mainBundle.LoadAsset<Texture2D>("RandomizerSelectionBG3.png"), null); // fake handle bacuse I can't be arsed with addressables for a single texture
+                        }
                         item.m_Toggled = false;
                         __instance.m_ActiveSurvivalSettings.RemoveAt(i);
                         __instance.m_ActiveSurvivalSettings.Insert(0, item);

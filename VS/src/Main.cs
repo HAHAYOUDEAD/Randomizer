@@ -32,7 +32,7 @@ namespace Randomizer
         {
             modsPath = MelonEnvironment.ModsDirectory;
 
-            string dir = Path.Combine(modsPath + mainFolder);
+            string dir = Path.Combine(modsPath, mainFolder);
 
             if (!Directory.Exists(dir))
             {
@@ -47,8 +47,6 @@ namespace Randomizer
             inconsistentTransitions = JsonSerializer.Deserialize<Dictionary<string, TransitionDefinition[]>>(LoadEmbeddedJSON("InconsistentTransitions.json"), GetDefaultJsonOptions()) ?? [];
 
             mainBundle = LoadEmbeddedAssetBundle("randomizer");
-
-            survivorSettingsTexture = mainBundle.LoadAsset<Texture2D>("RandomizerSelectionBG3.png");
 
             //RunTransitionDictionaryIntegrityCheck();
         }

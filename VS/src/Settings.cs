@@ -12,12 +12,9 @@ namespace Randomizer
 
         public static void OnLoad()
         {
-            Settings.options = new RandomizerSettings(Path.Combine(mainFolder, "Settings")); // folder name
+            Settings.options = new RandomizerSettings(Path.Combine(mainFolder, "Settings")); // put settings under folder
             Settings.options.AddToModSettings("Randomizer");
         }
-
-        
-
     }
 
     // ideas
@@ -70,16 +67,19 @@ namespace Randomizer
         [Description("- Random: uses random seed per save" +
             "\n  - Controlled: uses seed derived from saveslot name, can be changed along with the saveslot name" +
             "\n  - Debug: uses fixed seed 42 for all savegames, for testing purposes only" +
-            "\n\n!! WARNING: changing this will reroll all your saves that have randomizer enabled" +
-            "\n\nDefault: Reasonable")]
+            "\n\n!! WARNING: changing this will affect all savesfiles that have randomizer enabled. The seed however is always fixed, so this option is revertible" +
+            "\n\nDefault: Random")]
         [Choice(new string[]
         {
             "Random",
             "Controlled",
             "Debug"
         })]
+#if DEBUG
         public int seedMode = 2;
-
+#else
+        public int seedMode = 0;
+#endif
         [Name("Hide transition labels")]
         [Description("For additional confusion\n\nDefault: True")]
         public bool hideTransitionLabels = true;

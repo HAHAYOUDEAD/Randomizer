@@ -1,10 +1,9 @@
 {
   "RNZ_NewGameTitle": {
-    "English": "RANDOMIZER: TRANSITIONS",
-    "Russian": ""
+    "English": "RANDOMIZER: TRANSITIONS"
   },
   "RNZ_NewGameDescription": {
-    "English": "The connections between familiar places are in disarray: doors and entrances may lead to unexpected places. \n\nEnable if you wish to rediscover The Great Bear. The preferences may be tweaked, but that doing so might disrupt the transitions again.",
-    "Russian": ""
+    "English": "The connections between familiar places are in disarray: doors and entrances may lead to unexpected places. \n\nEnable if you wish to rediscover The Great Bear. The preferences may be tweaked, but doing so might alter the transitions again.",
+    "Russian": "Связи между знакомыми локациями нарушены: двери и переходы могут вести в неожиданные места. \n\nВключите, если хотите заново открыть для себя остров Великого Медведя. Настройки можно изменить, однако это может снова перетасовать переходы."
   }
 }
