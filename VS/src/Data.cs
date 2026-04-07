@@ -47,7 +47,7 @@ namespace Randomizer
         public bool region;
 
     }
-    class Pair
+    public class Pair
     {
         public TransitionDefinition In { get; set; }
         public TransitionDefinition Out { get; set; }
@@ -63,6 +63,8 @@ namespace Randomizer
         public static Dictionary<string, TransitionDefinition[]> transitions = [];
         public static Dictionary<string, TransitionDefinition[]> inconsistentTransitions = [];
         public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> rolledPairs = []; // origonal scene, <transition info > replacer transition info>
+
+        public static int globalSeed = 42;
 
         public static Dictionary<string, SceneData> allScenesData = new() {
             { "AFHangar",                       new SceneData { version = Version.TFTFT,   size = 3,  unique = true,  instantiable = false, region = false } },

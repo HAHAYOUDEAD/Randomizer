@@ -114,6 +114,9 @@ static class Shenanigans
         //methods.Add(AccessTools.Method(typeof(UnityEngine.SceneManagement.SceneManager), nameof(UnityEngine.SceneManagement.SceneManager.GetActiveScene)));
         methods.Add(AccessTools.PropertyGetter(typeof(SceneSet), nameof(SceneSet.RegionGroupNameLocId)));
 
+        methods.Add(AccessTools.Method(typeof(Panel_MainMenu), nameof(Panel_MainMenu.OnLoadSaveSlot)));
+        methods.Add(AccessTools.Method(typeof(Panel_MainMenu), nameof(Panel_MainMenu.OnLoadGame)));
+
 
         return methods;
     }
@@ -149,13 +152,13 @@ static class Shenanigans
 
     static void Postfix(MethodBase __originalMethod)
     {
-        Log(CC.White, "--raw " + $"[METHOD CALL] {__originalMethod.DeclaringType.Name}.{__originalMethod.Name}");
+        Log("--raw " + $"[METHOD CALL] {__originalMethod.DeclaringType.Name}.{__originalMethod.Name}");
         var after = GetValueSafe();
 
         if (_before != after)
         {
             Log(CC.Green, "--raw " + $"[FIELD CHANGE] {__originalMethod.DeclaringType.Name}.{__originalMethod.Name}");
-            Log(CC.White, "--raw " + $"    {_before ?? "null"} → {after ?? "null"}");
+            Log("--raw " + $"    {_before ?? "null"} → {after ?? "null"}");
 
             // optional
             // Log(Environment.StackTrace);

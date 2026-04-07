@@ -8,8 +8,9 @@ global using System.Collections;
 global using System.Collections.Generic;
 global using Il2Cpp;
 global using System.Text.Json;
+global using System.Text;
 global using static Randomizer.Data;
-using Il2CppTLD.Serialization;
+global using LocalizationUtilities;
 using System.Text.Json.Serialization;
 
 namespace Randomizer
@@ -23,6 +24,11 @@ namespace Randomizer
         public static string modsPath;
 
         public const string resourcesFolder = "Randomizer.Resources."; // root is project name
+        public const string mainFolder = "Randomizer";
+        public const string addressableRefHack = "RANDOMIZER";
+
+        public static Texture2D survivorSettingsTexture = new(1, 1);
+
 
         public static bool IsScenePlayable()
         {
@@ -42,6 +48,29 @@ namespace Randomizer
         public static void Log(CC color = CC.White, string message = "🌚")
         {
             if (Settings.options.debug) MelonLogger.Msg(color, message);
+        }
+
+        public static void Log(string message = "🌚")
+        {
+            CC color = CC.White;
+            if (Settings.options.debug) MelonLogger.Msg(color, message);
+        }
+
+        public static void LogAlways(CC color = CC.White, string message = "🌚")
+        {
+            MelonLogger.Msg(color, message);
+        }
+
+        public static AssetBundle? LoadEmbeddedAssetBundle(string name)
+        {
+            using (Stream? stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcesFolder + name))
+            {
+                MemoryStream? memory = new((int)stream.Length);
+                stream!.CopyTo(memory);
+
+                Il2CppSystem.IO.MemoryStream memoryStream = new(memory.ToArray());
+                return AssetBundle.LoadFromStream(memoryStream);
+            };
         }
 
         public static string? LoadEmbeddedJSON(string name)
@@ -70,6 +99,23 @@ namespace Randomizer
             };
 
             return options;
+        }
+
+
+        public static int GetSeedFromSandboxName(string name) // FNV1a
+        {
+            unchecked
+            {
+                int hash = (int)2166136261;
+
+                foreach (char c in name)
+                {
+                    hash ^= c;
+                    hash *= 16777619;
+                }
+
+                return hash;
+            }
         }
     }
 }

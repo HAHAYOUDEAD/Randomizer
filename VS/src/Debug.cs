@@ -1,8 +1,5 @@
-﻿using Il2Cpp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿#if DEBUG
+
 using System.Threading.Tasks;
 using static UnityEngine.UI.Selectable;
 
@@ -238,6 +235,8 @@ namespace Randomizer
 
         }
 
+
+
         //       ___                           __ 
         //      / _ \___ ___ ___ ___ _________/ / 
         //     / , _/ -_|_-</ -_) _ `/ __/ __/ _ \
@@ -245,6 +244,80 @@ namespace Randomizer
         //                                        
 
         public static bool breakCoroutines = false;
+
+        public static string ToStringWithF(Vector3 v, string format = "0.###")
+        {
+            return $"({v.x.ToString(format)}f, {v.y.ToString(format)}f, {v.z.ToString(format)}f)"; // format vector3 string to (1.23f, 2.3f, 7.45f)
+        }
+
+        public static string ToStringWithF(Quaternion q, string format = "0.####")
+        {
+            return $"({q.x.ToString(format)}f, {q.y.ToString(format)}f, {q.z.ToString(format)}f, {q.w.ToString(format)}f)";
+        }
+
+        [HarmonyPatch(typeof(PlayerManager), nameof(PlayerManager.ExitMeshPlacement))]
+        private static class ManagePostPlacement
+        {
+            internal static void Prefix(PlayerManager __instance)
+            {
+                if (__instance.GetObjectToPlace()?.name.StartsWith("RandomizerDoor_A") == true)
+                {
+                    if (Vector3.Distance(__instance.GetObjectToPlace().transform.position, Vector3.zero) < 0.01f) return;
+                    DumpQueDoorPos(__instance.GetObjectToPlace().transform);
+                    HUDMessage.AddMessage("Writing Que door pos to file", true, true);
+
+                }
+            }
+        }
+        
+
+        public static void DumpCurrentPlayerPos() // for position gathering
+        { 
+
+            List<(string scene, Vector3 pos, float pitch, float yaw)> values = new(){
+                new() { scene = "", pos = new Vector3(1f, 1f, 1f), pitch = 1f, yaw = 1f}, // dump as this, then convert to dict by scene and to static json
+                new() { scene = "RuralRegion", pos = new Vector3(1146.62f, 89.17f, 1778.19f), pitch = 1.60f, yaw = 85.56f },
+            };
+
+            // set pitch with GameManager.GetVpFPSCamera()?.m_Pitch
+
+            string dir = modsPath + "RandomizerDebugOutput/";
+            string file = dir + "MysteryDoorDestinations.txt";
+
+            string data = $"new() {{ scene = \"{GameManager.m_ActiveScene}\", pos = new Vector3{ToStringWithF(GameManager.GetPlayerTransform().position)}, pitch = {GameManager.GetVpFPSCamera()?.m_CurrentPitch.ToString("0.00")}f, yaw = {GameManager.GetVpFPSCamera()?.m_CurrentYaw.ToString("0.00")}f }},";
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            File.AppendAllText(file, data);
+            File.AppendAllText(file, "\n");
+            
+        }
+
+        public static void DumpQueDoorPos(Transform t) // call after door been placed
+        {
+            List<(string scene, Vector3 pos, Quaternion rot, Vector3 sca)> values = new(){
+                new() { scene = "RuralRegion", pos = new Vector3(1146.62f, 89.17f, 1778.19f), rot = new Quaternion(1f, 1f, 1f, 1f), sca = new Vector3(1f, 1f, 1f) }, // dump as this, then convert to dict by scene and to static json
+            new() { scene = "RuralRegion", pos = new Vector3(2372.162f, 54.797f, 2272.896f), rot = new Quaternion(-0f, 0.766f, -0f, -0.6428f), sca = new Vector3(1f, 1f, 1f) },
+            };
+
+            // set pitch with GameManager.GetVpFPSCamera()?.m_Pitch
+
+            string dir = modsPath + "RandomizerDebugOutput/";
+            string file = dir + "MysteryDoorPositions.txt";
+
+            string data = $"new() {{ scene = \"{GameManager.m_ActiveScene}\", pos = new Vector3{ToStringWithF(t.position)}, rot = new Quaternion{ToStringWithF(t.rotation)}, sca = new Vector3{ToStringWithF(t.localScale)} }},";
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            File.AppendAllText(file, data);
+            File.AppendAllText(file, "\n");
+        }
 
         public static void Dump() // to use directly in UE
         {
@@ -712,3 +785,4 @@ namespace Randomizer
         }
     }
 }
+#endif

@@ -34,7 +34,9 @@
         <ModsPath>$(TheLongDarkPath)/Mods</ModsPath>
         <AssemblySearchPaths>$(AssemblySearchPaths);$(MelonLoaderPath);$(ManagedPath);$(Il2CppPath);$(ModsPath);</AssemblySearchPaths>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DefineConstants>$(DefineConstants);SHENANIGANS</DefineConstants>
+    </PropertyGroup>
 
     <!--This tells the compiler to not include referenced assemblies in the output folder.-->
     <ItemDefinitionGroup>
@@ -45,10 +47,14 @@
     </ItemDefinitionGroup>
     <ItemGroup>
       <None Remove="Resources\InconsistentTransitions.json" />
+      <None Remove="Resources\Localization.json" />
+      <None Remove="Resources\randomizer" />
       <None Remove="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Resources\InconsistentTransitions.json" />
+      <EmbeddedResource Include="Resources\Localization.json" />
+      <EmbeddedResource Include="Resources\randomizer" />
       <EmbeddedResource Include="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>
@@ -56,6 +62,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Reference Include="ModComponent">
+        <HintPath>S:\SteamLibrary\steamapps\common\TheLongDark\Mods\ModComponent.dll</HintPath>
+      </Reference>
       <Reference Include="ModSettings">
         <HintPath>S:\SteamLibrary\steamapps\common\TheLongDark\Mods\ModSettings.dll</HintPath>
       </Reference>
