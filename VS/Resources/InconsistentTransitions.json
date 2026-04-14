@@ -6,20 +6,52 @@
       "type": "ToIndoors",
       "linkedPoint": "TrailerEExitPoint"
     }
-	
+
   ],
   "BlackrockRegion": [
-	{
+    {
       "exitPoint": "TrailerBEnterPoint",
       "toScene": "TrailerB",
       "type": "ToIndoors",
       "linkedPoint": "TrailerBExitPoint"
     },
-	{
+    {
       "exitPoint": "TrailerDEnterPoint",
       "toScene": "TrailerD",
       "type": "ToIndoors",
       "linkedPoint": "TrailerDExitPoint"
+    }
+  ],
+  "BunkerA": [
+    {
+      "exitPoint": "BunkerAExitPoint",
+      "toScene": "CanneryRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerB": [
+    {
+      "exitPoint": "BunkerBExitPoint",
+      "toScene": "RuralRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerC": [
+    {
+      "exitPoint": "BunkerCExitPoint",
+      "toScene": "RiverValleyRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
+    }
+  ],
+  "BunkerXL": [
+    {
+      "exitPoint": "BunkerXLExitPoint",
+      "toScene": "AirfieldRegion",
+      "type": "ToOutdoorsFromBunker",
+      "linkedPoint": "EnterPoint"
     }
   ],
   "CanneryRegion": [
@@ -29,13 +61,13 @@
       "type": "ToIndoors",
       "linkedPoint": "TrailerDExitPoint"
     },
-	{
+    {
       "exitPoint": "TrailerCEnterPoint",
       "toScene": "TrailerC",
       "type": "ToIndoors",
       "linkedPoint": "TrailerCExitPoint"
     },
-	{
+    {
       "exitPoint": "TrailerBEnterPoint",
       "toScene": "TrailerB",
       "type": "ToIndoors",
@@ -167,7 +199,7 @@
       "type": "ToIndoors",
       "linkedPoint": "CoastalHouseCBasementExitPoint"
     },
-	{
+    {
       "exitPoint": "HouseHBackEnterPoint",
       "toScene": "CoastalHouseH",
       "type": "ToIndoors",
@@ -329,7 +361,7 @@
       "type": "ToIndoors",
       "linkedPoint": "LakeCabinAExitPoint"
     },
-	{
+    {
       "exitPoint": "LakeCabinCEnterPoint",
       "toScene": "LakeCabinC",
       "type": "ToIndoors",
@@ -341,13 +373,13 @@
       "type": "ToIndoors",
       "linkedPoint": "LakeCabinFExitPoint"
     },
-	{
+    {
       "exitPoint": "LakeCabinBEnterPoint",
       "toScene": "LakeCabinB",
       "type": "ToIndoors",
       "linkedPoint": "LakeCabinBExitPoint"
-    },	
-	{
+    },
+    {
       "exitPoint": "LakeCabinDEnterPoint",
       "toScene": "LakeCabinD",
       "type": "ToIndoors",
@@ -371,13 +403,13 @@
     }
   ],
   "MountainTownRegion": [
-	{
+    {
       "exitPoint": "TrailerBEnterPoint",
       "toScene": "TrailerB",
       "type": "ToIndoors",
       "linkedPoint": "TrailerBExitPoint"
     },
-	{
+    {
       "exitPoint": "HouseBasementCEnterPoint",
       "toScene": "HouseBasementC",
       "type": "ToIndoors",
@@ -519,7 +551,7 @@
       "type": "ToIndoors",
       "linkedPoint": "CoastalHouseAExitPoint"
     },
-	{
+    {
       "exitPoint": "CoastalHouseDFrontEnterPoint",
       "toScene": "CoastalHouseD",
       "type": "ToIndoors",
@@ -531,7 +563,7 @@
       "type": "ToIndoors",
       "linkedPoint": "CoastalHouseDBackExitPoint"
     },
-	{
+    {
       "exitPoint": "CoastalHouseFEnterPoint",
       "toScene": "CoastalHouseF",
       "type": "ToIndoors",
@@ -591,7 +623,7 @@
       "type": "ToIndoors",
       "linkedPoint": "TrailerBExitPoint"
     },
-	{
+    {
       "exitPoint": "TrailerDEnterPoint",
       "toScene": "TrailerD",
       "type": "ToIndoors",

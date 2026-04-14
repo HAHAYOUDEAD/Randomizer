@@ -5,5 +5,45 @@
   "RNZ_NewGameDescription": {
     "English": "The connections between familiar places are in disarray: doors and entrances may lead to unexpected places. \n\nEnable if you wish to rediscover The Great Bear. The preferences may be tweaked, but doing so might alter the transitions again.",
     "Russian": "Связи между знакомыми локациями нарушены: двери и переходы могут вести в неожиданные места. \n\nВключите, если хотите заново открыть для себя остров Великого Медведя. Настройки можно изменить, однако это может снова перетасовать переходы."
+  },
+
+  "RNZ_Settings_Transition": {
+    "English": "TRANSITIONS"
+  },
+  "RNZ_Settings_Transition_On": {
+    "English": "TRANSITIONS (Active in this save)",
+    "Russian": "TRANSITIONS (Активно)"
+  },
+  "RNZ_Settings_Transition_Off": {
+    "English": "TRANSITIONS (Inactive in this save)",
+    "Russian": "TRANSITIONS (Неактивно)"
+  },
+  "RNZ_Settings_Warning": {
+    "English": "KEEP IN MIND!",
+    "Russian": "ИМЕЙ ВВИДУ!"
+  },
+  "RNZ_Settings_WarningText": {
+    "English": "Changing these settings will affect all savesfiles that have randomizer enabled. The seed however is always fixed, so the options ARE revertible.\n\n'Mode' settings require scene reload to take effect",
+    "Russian": "Изменение этих настроек повлияет на все сохранения с влючённым рандомайзером. Но случайное число для генерации привязано к сохранению, поэтому эти настройки ОБРАТИМЫ\n\nНастройки которые меняют режимы генерации требуют перезагрузки сцены"
+  },
+
+  "RNZ_QueDoor_Hover": {
+    "English": "Traverse the unknown",
+    "Russian": "Перенестись в неизвестное"
+  },
+
+  "RNZ_Dementia_Affliction": {
+    "English": "Dementia",
+    "Russian": "Деменция"
+  },
+
+  "RNZ_Dementia_AfflictionDescription": {
+    "English": "You are suffering from a headache caused by severe overstimulation. Constantly shifting between dimensions has overwhelmed your mind. For a short time, you remember your place in this world as the chaos recedes. Use this moment of clarity while you can.",
+    "Russian": "Вы страдаете от головной боли, вызванной сильной перегрузкой. Постоянные перемещения в пространстве сотрясли ваш разум. На короткое время вы вновь вспоминаете своё место в этом мире, пока хаос отступает. Используйте этот момент ясности, пока есть возможность."
+  },
+
+  "RNZ_Dementia_AfflictionDescriptionRare": {
+    "English": "​You have crossed the threshold once too often, treating the seams of reality as little more than a shortcut. Your brain, never designed to exist everywhere at once, has finally reached its limit, pulling you back into the dull, throbbing reality of a headache. \n\nFor a fleeting moment, the shifting subsides. What remains is a cold, stark - yet familiar - reality. A brief, quiet intermission provided by the universe itself, before the carousel begins its spin once more...\n\n...in the Twilight Zone."
   }
+
 }

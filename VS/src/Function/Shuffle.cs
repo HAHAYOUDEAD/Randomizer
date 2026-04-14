@@ -12,63 +12,10 @@ using Il2CppTLD.AddressableAssets;
 
 namespace Randomizer
 {
-    internal class Function
+    internal class Shuffle
     {
         private static int chanceRollSameTransitionType = 5;
 
-
-        /// <summary>
-        /// ⚠ Only call when saveslot is loaded ⚠
-        /// </summary>
-        public static int AcquireSeed(bool early)
-        {
-            if (Settings.options.seedMode == 0) // random
-            {
-                if (!early)
-                {
-                    return GameManager.m_SceneTransitionData.m_GameRandomSeed;
-                }
-
-                int seed = 0;
-
-                SaveGameSlots.GetSaveSlotFromName(SaveGameSystem.GetCurrentSaveName()).TryGetData("global", out GlobalSaveGameFormat gsgf); // pull from savegame data because it's deserialized too late
-                if (gsgf != null)
-                {
-                    string json = gsgf.m_GameManagerSerialized;
-                    try
-                    {
-                        using var outer = JsonDocument.Parse(json); // way faster than deserializing into objects
-
-                        if (outer.RootElement.TryGetProperty("m_SceneTransitionDataSerialized", out var innerProp) && innerProp.ValueKind == JsonValueKind.String)
-                        {
-                            string innerJson = innerProp.GetString();
-
-                            if (!string.IsNullOrEmpty(innerJson))
-                            {
-                                using var inner = JsonDocument.Parse(innerJson);
-
-                                if (inner.RootElement.TryGetProperty("m_GameRandomSeed", out var seedProp)) seedProp.TryGetInt32(out seed);
-                            }
-                        }
-                    }
-                    catch (JsonException ex)
-                    {
-                        Log(CC.Red, "FAILURE: can't retrieve seed from saveslot: " + ex.Message);
-                    }
-                }
-                return seed;
-            }
-            else if (Settings.options.seedMode == 1) // controlled
-            {
-                return GetSeedFromSandboxName(SaveGameSlots.GetUserDefinedSlotName(SaveGameSystem.GetCurrentSaveName())); // create from saveslot name
-            }
-            else if (Settings.options.seedMode == 2) // debug
-            {
-                return 42;
-            }
-
-            return 42;
-        }
 
         public static bool PickPairByTypeAndRemoveFromList(
             int seed,
@@ -145,7 +92,8 @@ namespace Randomizer
             return true;
         }
 
-        public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> RollPairs(int seed)
+
+        public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> RollRegularPairs(int seed)
         {
             var sw = Stopwatch.StartNew();
             var rng = new Random(seed);
@@ -231,23 +179,6 @@ namespace Randomizer
                     pairedPairs[pair] = randomPair;
                 }
 
-                /*
-                List<Pair> pairsClone = new(pairs); // made by Claude
-
-                // Fisher-Yates shuffle for uniform randomness
-                for (int i = pairsClone.Count - 1; i > 0; i--)
-                {
-                    int j = rng.Next(i + 1);
-                    (pairsClone[i], pairsClone[j]) = (pairsClone[j], pairsClone[i]);
-                }
-
-                // pair adjacent elements (guaranteed 2-cycles)
-                for (int i = 0; i + 1 < pairsClone.Count; i += 2)
-                {
-                    pairedPairs[pairsClone[i]] = pairsClone[i + 1];
-                    pairedPairs[pairsClone[i + 1]] = pairsClone[i];
-                }
-                */
                 if (pairsClone.Count % 2 != 0)
                 {
                     Log(CC.Yellow, $"Odd pair count. Transition to {pairsClone[^1].In.toScene}: {pairsClone[^1].In.exitPoint} in {pairsClone[^1].In.fromScene} left upaired");

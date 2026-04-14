@@ -33,6 +33,7 @@
         <Il2CppPath>$(TheLongDarkPath)/MelonLoader/Il2CppAssemblies</Il2CppPath>
         <ModsPath>$(TheLongDarkPath)/Mods</ModsPath>
         <AssemblySearchPaths>$(AssemblySearchPaths);$(MelonLoaderPath);$(ManagedPath);$(Il2CppPath);$(ModsPath);</AssemblySearchPaths>
+        <RootNamespace>Randomizer</RootNamespace>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
       <DefineConstants>$(DefineConstants);SHENANIGANS</DefineConstants>
@@ -48,12 +49,16 @@
     <ItemGroup>
       <None Remove="Resources\InconsistentTransitions.json" />
       <None Remove="Resources\Localization.json" />
+      <None Remove="Resources\MysteryDoorDestinations.json" />
+      <None Remove="Resources\MysteryDoorPotitions.json" />
       <None Remove="Resources\randomizer" />
       <None Remove="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Resources\InconsistentTransitions.json" />
       <EmbeddedResource Include="Resources\Localization.json" />
+      <EmbeddedResource Include="Resources\MysteryDoorDestinations.json" />
+      <EmbeddedResource Include="Resources\MysteryDoorPotitions.json" />
       <EmbeddedResource Include="Resources\randomizer" />
       <EmbeddedResource Include="Resources\Transitions.json" />
     </ItemGroup>

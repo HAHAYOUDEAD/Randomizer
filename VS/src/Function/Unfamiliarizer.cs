@@ -14,6 +14,7 @@ namespace Randomizer
     }
     internal class Unfamiliarizer
     {
+
         private static void UnfamiliarizeCampOffice()
         {
             // get all GEAR from main scene (MC) and move under sandbox root

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Steamworks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,22 @@ namespace Randomizer
         public bool region;
 
     }
+
+    public class QueDoorPosition
+    {
+        public Vector3 position;
+        public Quaternion rotation;
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Vector3? scale = null;
+        public bool doorless = false;
+    }
+    public class QueDoorDestination
+    {
+        public Vector3 position;
+        public float pitch;
+        public float yaw;
+    }
+
     public class Pair
     {
         public TransitionDefinition In { get; set; }
@@ -58,11 +75,17 @@ namespace Randomizer
             Out = outDef;
         }
     }
-    internal class Data
+    public class Data
     {
         public static Dictionary<string, TransitionDefinition[]> transitions = [];
         public static Dictionary<string, TransitionDefinition[]> inconsistentTransitions = [];
         public static Dictionary<string, Dictionary<TransitionDefinition, TransitionDefinition>> rolledPairs = []; // origonal scene, <transition info > replacer transition info>
+        public static Dictionary<string, QueDoorPosition[]> queDoorPositionPool = [];
+        public static Dictionary<string, QueDoorDestination[]> queDoorDestinationPool = [];
+        public static Dictionary<string, bool> globalSandboxToggleStatus = [];
+
+        public const string survivorSettingsTexture = "RandomizerSelectionBG3.png";
+        public const string saveSlotOverlayTexture = "SaveSlotOverlay.png";
 
         public static int globalSeed = 42;
 

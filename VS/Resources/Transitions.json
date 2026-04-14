@@ -411,38 +411,6 @@
       "linkedPoint": "CanyonCave_ExitPoint2"
     }
   ],
-  "BunkerA": [
-    {
-      "exitPoint": "BunkerAExitPoint",
-      "toScene": "CanneryRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "EnterPoint"
-    }
-  ],
-  "BunkerB": [
-    {
-      "exitPoint": "BunkerBExitPoint",
-      "toScene": "RuralRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "EnterPoint"
-    }
-  ],
-  "BunkerC": [
-    {
-      "exitPoint": "BunkerCExitPoint",
-      "toScene": "RiverValleyRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "EnterPoint"
-    }
-  ],
-  "BunkerXL": [
-    {
-      "exitPoint": "BunkerXLExitPoint",
-      "toScene": "AirfieldRegion",
-      "type": "ToOutdoorsFromBunker",
-      "linkedPoint": "EnterPoint"
-    }
-  ],
   "CampOffice": [
     {
       "exitPoint": "CampOfficeBackExitPoint",

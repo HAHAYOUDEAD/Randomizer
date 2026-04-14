@@ -10,24 +10,33 @@ global using Il2Cpp;
 global using System.Text.Json;
 global using System.Text;
 global using static Randomizer.Data;
+global using static Randomizer.Shuffle;
 global using LocalizationUtilities;
 using System.Text.Json.Serialization;
+using MelonLoader.Utils;
 
 namespace Randomizer
 {
     internal class Utility
     {
-        public const string modVersion = "0.2.0";
-        public const string modName = "Randomizer";
+        public const string modVersion = "0.3.0";
+        public const string modName = "Randomizer-Transitions";
         public const string modAuthor = "Waltz";
 
-        public static string modsPath;
+        public const string settingsName = "Randomizer";
 
-        public const string resourcesFolder = "Randomizer.Resources."; // root is project name
+        public static string modsPath = MelonEnvironment.ModsDirectory;
+
+        public const string resourcesFolder = "Randomizer.Resources."; // root is default namespace
         public const string mainFolder = "Randomizer";
         public const string addressableRefHack = "RANDOMIZER";
+        public const string sandboxDataFilename = "SandboxData";
 
-        
+        public static string sandboxDataFilePath = Path.Combine(modsPath, mainFolder, sandboxDataFilename + ".json");
+
+        public static Shader transparentShader = Shader.Find("Shader Forge/TLD_StandardTransparent");
+        public static Shader standardShader = Shader.Find("Shader Forge/TLD_StandardDiffuse");
+
 
 
         public static bool IsScenePlayable()
@@ -86,20 +95,7 @@ namespace Randomizer
 
             return result;
         }
-        public static JsonSerializerOptions GetDefaultJsonOptions()
-        {
-            var options = new JsonSerializerOptions
-            {
-                IncludeFields = true,
-                AllowTrailingCommas = true,
-                ReadCommentHandling = JsonCommentHandling.Skip,
-                WriteIndented = false,
-                DefaultIgnoreCondition = JsonIgnoreCondition.Never,
-                //UnknownTypeHandling = JsonUnknownTypeHandling.JsonElement
-            };
 
-            return options;
-        }
 
 
         public static int GetSeedFromSandboxName(string name) // FNV1a
@@ -115,6 +111,26 @@ namespace Randomizer
                 }
 
                 return hash;
+            }
+        }
+
+        public static Vector3 GetPointOnCircle(Vector3 center, float radius = 1f) // GPT
+        {
+            float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2f);
+
+            float x = Mathf.Cos(angle) * radius;
+            float z = Mathf.Sin(angle) * radius;
+
+            return new Vector3(center.x + x, center.y, center.z + z);
+        }
+
+
+        public static void Shuffle<T>(List<T> list)
+        {
+            for (int i = list.Count - 1; i > 0; i--)
+            {
+                int j = UnityEngine.Random.Range(0, i + 1);
+                (list[i], list[j]) = (list[j], list[i]);
             }
         }
     }
