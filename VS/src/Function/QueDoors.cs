@@ -67,17 +67,17 @@ namespace Randomizer
 
         public static void RandomAdvanceTime()
         {
-            float numHoursToSkip = Mathf.Pow(Random.value, 3f) * 24f;
+            float numHoursToSkip = Mathf.Pow(Random.Range(0.1f, 1f), 5f) * 24f;
             numHoursToSkip = Mathf.Round(numHoursToSkip * 100f) / 100f;
-            MelonLogger.Msg("skip " + numHoursToSkip);
+            Log("Que Door advanced " + numHoursToSkip + " hours");
+
             float played = GameManager.GetTimeOfDayComponent().GetHoursPlayedNotPaused();
             float currentTime = GameManager.GetTimeOfDayComponent().GetNormalizedTime();
             float threeHours = 0.125f;
             float oneHour = threeHours / 3f;
-            MelonLogger.Msg("before " + played + " | " + currentTime);
+
             GameManager.GetTimeOfDayComponent().SetNormalizedTime(Mathf.Repeat(currentTime + oneHour * numHoursToSkip, 1f));
             GameManager.GetTimeOfDayComponent().SetHoursPlayedNotPaused(played + numHoursToSkip);
-            MelonLogger.Msg("after " + GameManager.GetTimeOfDayComponent().GetHoursPlayedNotPaused() + " | " + GameManager.GetTimeOfDayComponent().GetNormalizedTime());
         }
         
         public static QueDoorDestination PickPoint(QueDoorDestination[] points, Vector3 origin) // GPT
