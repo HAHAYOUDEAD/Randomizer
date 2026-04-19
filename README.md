@@ -1,3 +1,6 @@
+<img width="881" height="291" alt="изображение" src="https://github.com/user-attachments/assets/3759cecb-5ffe-4c65-9573-68bddbde744c" />
+
+
 # Rediscover The Great Bear in all new chaotic fashion!
 
 - Randomizers are enabled per-game 
