@@ -727,6 +727,29 @@ namespace Randomizer
 
         }
 
+        public static void GenerateTempExitPointDef()
+        {
+
+            Dictionary<string, Dictionary<string, Vector3>> data = new() {
+                { "LakeRegion", new() { { "TrailerBExitPoint", new Vector3(1678.51f, 37.42f, 1255.66f) } } }, 
+                //{ "LakeRegion", new() { { "tra", new Vector3(1678.51f, 37.42f, 1255.66f) } } }, 
+            
+            };
+
+            string dir = Path.Combine(modsPath, "RandomizerDebugOutput");
+            dir = Path.Combine(dir, "Processed");
+            string file = Path.Combine(dir, "ExitPointDefinition_Temp.json");
+
+            string dataText = JsonSerializer.Serialize(data, Jsoning.GetDefaultOptions());
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            File.WriteAllText(file, dataText);
+        }
+
 
 
         //       ___                           __ 

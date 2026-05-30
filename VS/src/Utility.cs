@@ -19,7 +19,7 @@ namespace Randomizer
 {
     internal class Utility
     {
-        public const string modVersion = "0.3.0";
+        public const string modVersion = "0.3.1";
         public const string modName = "Randomizer-Transitions";
         public const string modAuthor = "Waltz";
 

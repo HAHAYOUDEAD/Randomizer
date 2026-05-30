@@ -116,6 +116,8 @@ namespace Randomizer
 
     // + add console command to force toggle randomizer per saveslot
 
+    // add mod regions
+
 
 
     // from moose:
@@ -193,7 +195,7 @@ namespace Randomizer
 
 
         [Name("Enable debug")]
-        [Description("Toggle")]
+        [Description("Toggle debug logging in console. Verbose, might affect performance")]
 #if DEBUG
         public bool debug = true;
 #else

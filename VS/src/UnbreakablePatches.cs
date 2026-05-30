@@ -110,7 +110,7 @@ namespace Randomizer
                     {
 
                         TransitionDefinition? origin = list.FirstOrDefault(find => find.toScene == __instance.m_SceneToLoad && find.exitPoint == __instance.m_ExitPointName) ?? null;
-                        
+
                         if (origin == null)
                         {
                             Log(CC.Gray, $"┌--{__instance.m_SceneToLoad}: {__instance.m_ExitPointName}");
@@ -173,6 +173,21 @@ namespace Randomizer
 
         //GameManager.m_SceneTransitionData.m_LastOutdoorScene is inconsistent with actual lasst outdoor scene; seems to always defailt to LakeRegion
 
+
+        [HarmonyPatch(typeof(SaveGameSystem), nameof(SaveGameSystem.LoadSceneData))]
+        public static class LateSceneInit
+        {
+            internal static void Postfix()
+            {
+                string sceneName = GameManager.m_ActiveScene;
+
+                if (Settings.options.shuffleMode != 2) // skip for outdoor only
+                {
+                    if (QueDoors.SpawnQueDoor()) Log(CC.Magenta, "Creating a mystery door...");
+                    QueDoors.CreateHelperObjects(sceneName);
+                }
+            }
+        }
 
         [HarmonyPatch(typeof(LoadScene), nameof(LoadScene.CompleteActivate), [typeof(bool)])]
         private static class TrackRegionForInterior
@@ -243,6 +258,8 @@ namespace Randomizer
                 {
                     // handle when implementing InconsistentTransitions
                 }
+
+                DisambiguateExitPoint(sceneToLoad, __instance.m_ExitPointName);
 
                 string a = __instance.m_SceneCanBeInstanced ? "can be instanced" : "cannot be instanced";
                 Log(System.ConsoleColor.Yellow, $"Transitioning to {sceneToLoad}: {__instance.m_ExitPointName}, scene " + a);

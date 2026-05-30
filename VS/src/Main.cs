@@ -1,8 +1,12 @@
 ﻿global using static Randomizer.Utility;
+using AssetsTools.NET.Extra;
 using Harmony;
 using Il2Cpp;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Il2CppNewtonsoft.Json.Utilities;
+using Il2CppTLD.AddressableAssets;
 using Il2CppTLD.OptionalContent;
+using Il2CppTLD.Trader;
 using JetBrains.Annotations;
 using MelonLoader.Utils;
 using System.Linq;
@@ -14,6 +18,7 @@ using static Randomizer.UnbreakablePatches;
 using static UnityEngine.ParticleSystem.PlaybackState;
 using static UnityEngine.UI.Image;
 using static UnityEngine.UI.Selectable;
+using AssetHelper = Il2CppTLD.AddressableAssets.AssetHelper;
 
 
 namespace Randomizer
@@ -93,6 +98,7 @@ namespace Randomizer
             {
 
                 GameManager.GetPlayerManagerComponent().StartPlaceMesh(QueDoors.PrepareQueDoor(false, null), PlaceMeshFlags.DestroyOnCancel);
+
             } 
             if (InputManager.GetKeyDown(InputManager.m_CurrentContext, KeyCode.Alpha0))
             {
@@ -122,7 +128,7 @@ namespace Randomizer
 
 #endif
 
-#if !SHENANIGANS
+#if SHENANIGANS
             var current = Shenanigans.GetValueSafe();
 
             if (Shenanigans._lastValue != current)
@@ -149,11 +155,13 @@ namespace Randomizer
                 return;
             }
 
+            /* moved to late init because of async addressable load fail 
             if (Settings.options.shuffleMode != 2) // skip for outdoor only
             {
                 if (QueDoors.SpawnQueDoor()) Log(CC.Magenta, "Creating a mystery door...");
                 QueDoors.CreateHelperObjects(sceneName);
             }
+            */
 
             UnlockDoors();
 

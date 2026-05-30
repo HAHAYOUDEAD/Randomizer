@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Random = System.Random;
 using System.Diagnostics;
 using Il2CppAmazingAssets.TerrainToMesh;
+#if DEBUG
 using static Randomizer.Debug;
+#endif
 using UnityEngine.AddressableAssets;
 using Il2CppTLD.AddressableAssets;
 
@@ -394,11 +396,25 @@ namespace Randomizer
             Log(total == allTransitions.Count ? CC.Green : CC.Red, $"{total} pairs vs {allTransitions.Count} total transitions ({allTransitions.Count - total} went MIA)");
             Log("");
 
+#if DEBUG
             RunSymmetryDiagnostics(result);
+#endif
 
             return result;
 
 
+        }
+
+        public static void DisambiguateExitPoint(string scene, string exitPoint)
+        {
+            switch (scene)
+            {
+                case "LakeRegion":
+                    if (exitPoint == "TrailerBExitPoint") 
+                        GameManager.m_SceneTransitionData.m_PosBeforeInteriorLoad = new Vector3(1678.51f, 37.42f, 1255.66f);
+                    break;
+            }
+                
         }
     }
 }
