@@ -3,7 +3,7 @@
 
     <PropertyGroup>
         <!--This needs to be changed for the mod to compile.-->
-        <TheLongDarkPath>S:\SteamLibrary\steamapps\common\TheLongDark</TheLongDarkPath>
+        <TheLongDarkPath>F:\SteamGames\steamapps\common\TheLongDark</TheLongDarkPath>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -63,19 +63,16 @@
       <EmbeddedResource Include="Resources\Transitions.json" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="Waltz.Modding.TLD.Il2CppAssemblies.Windows" Version="2.52.0" />
+      <PackageReference Include="MonsieurMeh.Modding.TLD.Il2CppAssemblies.Windows" Version="2.58.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Reference Include="ModComponent">
-        <HintPath>S:\SteamLibrary\steamapps\common\TheLongDark\Mods\ModComponent.dll</HintPath>
+        <HintPath>F:\SteamGames\steamapps\common\TheLongDark\Mods\ModComponent.dll</HintPath>
       </Reference>
       <Reference Include="ModSettings">
-        <HintPath>S:\SteamLibrary\steamapps\common\TheLongDark\Mods\ModSettings.dll</HintPath>
+        <HintPath>F:\SteamGames\steamapps\common\TheLongDark\Mods\ModSettings.dll</HintPath>
       </Reference>
     </ItemGroup>
-	
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="xcopy /y /d  &quot;$(TargetPath)&quot; &quot;$(TheLongDarkPath)\Mods&quot;" />
-    </Target>
+
 </Project>

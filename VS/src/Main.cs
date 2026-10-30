@@ -195,7 +195,7 @@ namespace Randomizer
             {
                 if (GameManager.m_ActiveScene == "ConvenienceStoreA")
                 {
-                    var prybar = GameObject.Instantiate(GearItem.LoadGearItemPrefab("GEAR_Prybar"));
+                    var prybar = GameObject.Instantiate(Utility.LoadGearItemPrefab("GEAR_Prybar"));
                     prybar.CurrentHP = 26f; // just past breaking threshold
                     prybar.transform.localPosition = new(0.435f, 2.28f, 8.78f);
                     prybar.transform.localEulerAngles = new(63.34f, 208.98f, 301.59f);

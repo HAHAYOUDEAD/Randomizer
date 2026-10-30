@@ -133,5 +133,12 @@ namespace Randomizer
                 (list[i], list[j]) = (list[j], list[i]);
             }
         }
+
+        public static GearItem? LoadGearItemPrefab(string name)
+        {
+            GameObject? gameObject = Resources.Load<GameObject>(name);
+
+            return gameObject?.GetComponent<GearItem>();
+        }
     }
 }

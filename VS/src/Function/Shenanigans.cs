@@ -38,7 +38,7 @@ static class Shenanigans
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.OnTriggerEnter)));
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.AssignBindingOverrides)));
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.ExitToMainMenu)));
-        methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.HolsterItemInHands)));
+        methods.Add(AccessTools.Method(typeof(PlayerManager), nameof(PlayerManager.UnequipItemInHands)));
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.PerformInteraction)));
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.PerformHold)));
         methods.Add(AccessTools.Method(typeof(LoadScene), nameof(LoadScene.EndHold)));
